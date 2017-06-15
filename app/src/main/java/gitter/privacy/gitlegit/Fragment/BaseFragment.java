@@ -24,8 +24,6 @@ public class BaseFragment extends Fragment {
     private static final String TAG = BaseFragment.class.getSimpleName();
     protected View parentView;
 
-    public static final String WORKOUTPLAN_ID_KEY = "workout_identifier_key";
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

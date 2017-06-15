@@ -23,7 +23,6 @@ public class JohnIntroFragment extends BaseFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        //Deze parentview is afkomstige van BaseFragment
         setTextContainerListener();
         return bindXMLToFragment(R.layout.john_intro_view, inflater, container);
     }
