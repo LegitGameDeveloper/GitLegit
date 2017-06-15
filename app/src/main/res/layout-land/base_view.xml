@@ -8,10 +8,8 @@
 
     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/fragmentContainer"
-        android:layout_width="576dp"
-        android:layout_height="295dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <!--Story Container -->
         <LinearLayout
