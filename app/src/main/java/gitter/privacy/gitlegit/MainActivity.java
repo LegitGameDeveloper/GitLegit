@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     TextView mStoryText;
     @BindView(R.id.storyTeller)
     TextView mStoryTeller;
-    @BindView(R.id.imageView)
+    @BindView(R.id.imageView2)
     ImageView mImageview;
 
     @Override
