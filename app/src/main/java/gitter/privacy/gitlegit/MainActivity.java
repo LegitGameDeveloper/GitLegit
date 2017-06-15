@@ -1,6 +1,7 @@
 package gitter.privacy.gitlegit;
 
 import android.content.Context;
+import android.media.Image;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
@@ -9,8 +10,11 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import java.io.File;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -26,13 +30,14 @@ public class MainActivity extends AppCompatActivity {
     TextView mStoryText;
     @BindView(R.id.storyTeller)
     TextView mStoryTeller;
+    @BindView(R.id.imageView)
+    ImageView mImageview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.base_view);
         ButterKnife.bind(this);
-
         Log.d(TAG, "onCreate: going to do some preparing");
         switchToDifferentScreen(new JohnIntroFragment(), JohnIntroFragment.TAG, false);
     }
@@ -44,6 +49,10 @@ public class MainActivity extends AppCompatActivity {
         }
         mStoryTeller.setText(personTalking);
         mStoryText.setText(textToDisplayInBubble);
+    }
+
+    public void setmImageview(ImageView mImageview) {
+        this.mImageview = mImageview;
     }
 
     public void setStoryContainerVisible(boolean show){
@@ -95,4 +104,6 @@ public class MainActivity extends AppCompatActivity {
                     .commit();
         }
     }
+
+
 }
