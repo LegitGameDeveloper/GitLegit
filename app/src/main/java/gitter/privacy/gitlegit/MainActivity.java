@@ -15,6 +15,7 @@ import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import gitter.privacy.gitlegit.Fragment.JohnIntroFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout mStoryContainer;
     @BindView(R.id.storyText)
     TextView mStoryText;
+    @BindView(R.id.storyTeller)
+    TextView mStoryTeller;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,13 +34,15 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         Log.d(TAG, "onCreate: going to do some preparing");
+        switchToDifferentScreen(new JohnIntroFragment(), JohnIntroFragment.TAG, false);
     }
 
-    public void setStoryText(String textToDisplayInBubble){
+    public void setStoryText(String textToDisplayInBubble, String personTalking){
         if(mStoryContainer.getVisibility() == View.INVISIBLE || mStoryContainer.getVisibility() == View.INVISIBLE){
             Log.e(TAG, "setStoryText: the story container(Bubble is not visible," +
                     " call setStoryContainerVisible from mainactivity)");
         }
+        mStoryTeller.setText(personTalking);
         mStoryText.setText(textToDisplayInBubble);
     }
 
@@ -47,6 +52,14 @@ public class MainActivity extends AppCompatActivity {
         }else{
             mStoryContainer.setVisibility(View.GONE);
         }
+    }
+
+    /**
+     * method used to apply a new listener to the textContainer (I.E, to handle what happens when the user taps the bubble)
+     * @param listener
+     */
+    public void setmStoryContainerListener(View.OnClickListener listener){
+        mStoryContainer.setOnClickListener(listener);
     }
 
     /**

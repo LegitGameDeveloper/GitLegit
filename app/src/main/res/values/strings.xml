@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">GitLegit</string>
+
+    <string name="john_introduction_info_1">Once upon a time…. John Doe was sick of all the gambling,
+        sleeping day’s and walking nights in Last Vegas. </string>
+    <string name="john_introduction_info_2">Tired of everything… he just wants to be like everyone else.
+        A good job, full LinkedIn Profile, Very Active on Facebook. But the most important thing is finding a job!</string>
+    <string name="john_introduction_1">Hello, my name is John I’m 32 years old.
+        I’m at this point.Looking for a job. My Friends told me that getLinked is a good way to start searching for work.</string>
+    <string name="john_introduction_2">Unfortunately, I don’t have any personal computer.
+        Let’s go to the Internet Cafe. I need to go to the Internet Café in the neighborhood.</string>
+
+
 </resources>
