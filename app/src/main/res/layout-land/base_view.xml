@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="gitter.privacy.gitlegit.MainActivity">
 
-    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <FrameLayout
         android:id="@+id/fragmentContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -15,21 +15,31 @@
         <LinearLayout
             android:id="@+id/storyContainer"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="80dp"
             android:layout_margin="2dp"
             android:background="@drawable/black_border"
             android:layout_gravity="bottom"
-            android:orientation="horizontal">
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/storyTeller"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textSize="15sp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp" />
 
             <TextView
                 android:id="@+id/storyText"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:textSize="15sp"
-                android:padding="10dp"
-                android:text="Ziehier man, ik ben soort van een verhaal, wat ga je nu doen?"/>
+                android:padding="3dp"
+                android:gravity="center"
+                android:maxLines="3"/>
         </LinearLayout>
 
     </FrameLayout>
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
