@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         Log.d(TAG, "onCreate: going to do some preparing");
-
     }
 
     @OnClick(R.id.btn_1)
