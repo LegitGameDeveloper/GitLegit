@@ -17,5 +17,11 @@
     to help us build several houses for the poor. We are in desperate need of help so you will be receiving minimum wage pay
     If you are interested, please apply below!</string>
 
-
+    <string name="john_scenario2_1">Once upon a time John Doe depleted all his food while binge watching every marvil series on netflex. But John Doe can’t enjoy his movies without food. Help John Doe with his groceries.
+</string>>
+    <string name="john_scenario2_2">Goodevening Sir, Welcome to …[choice]... We have a great deal for today. Are you interested? “
+</string>>
+    <string name="john_scenario2_3">First you need to fill this form on our Ipad and we will print the card for you. It will only take 2 minutes of your time.”</string>>
+    <string name="john_scenario2_4"> </string>>
+    <string name="john_scenario2_5"> </string>>
 </resources>
