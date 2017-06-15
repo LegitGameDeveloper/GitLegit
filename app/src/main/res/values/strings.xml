@@ -9,6 +9,13 @@
         I’m at this point.Looking for a job. My Friends told me that getLinked is a good way to start searching for work.</string>
     <string name="john_introduction_2">Unfortunately, I don’t have any personal computer.
         Let’s go to the Internet Cafe. I need to go to the Internet Café in the neighborhood.</string>
+    <string name="cleaner_job_title">CLEANERS WANTED!!</string>
+    <string name="cleaner_job_description">We are a large company looking for cleaners to clean stuff!\n
+    The pay is very high, you will be nicely compensated, interested? then please apply!</string>
+    <string name="volunteer_job_title">Looking for volunteers, (Minimum wage)</string>
+    <string name="volunteer_job_description">We are a small non-profit organization and we are looking for volunteerd
+    to help us build several houses for the poor. We are in desperate need of help so you will be receiving minimum wage pay
+    If you are interested, please apply below!</string>
 
 
 </resources>
