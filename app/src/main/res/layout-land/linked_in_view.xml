@@ -13,9 +13,10 @@
     <LinearLayout
         android:id="@+id/cleaner_job"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="80dp"
         android:orientation="vertical"
         android:layout_margin="5dp"
+        android:padding="3dp"
         android:background="@drawable/black_border">
 
         <TextView
@@ -32,9 +33,10 @@
     <LinearLayout
         android:id="@+id/volunteer_job"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="80dp"
         android:orientation="vertical"
         android:layout_margin="5dp"
+        android:padding="3dp"
         android:background="@drawable/black_border">
 
         <TextView

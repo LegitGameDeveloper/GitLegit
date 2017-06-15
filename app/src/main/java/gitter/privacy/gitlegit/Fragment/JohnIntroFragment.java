@@ -54,6 +54,8 @@ public class JohnIntroFragment extends BaseFragment {
                 case 3:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_introduction_2),"John");
                     break;
+                case 4:
+                    ((MainActivity)getActivity()).switchToDifferentScreen(new SearchingForJobFragment(),SearchingForJobFragment.TAG, false);
                 default:
                     Log.e(TAG, "playStory: unknown story counter for introduction given, why u do dis");
             }
