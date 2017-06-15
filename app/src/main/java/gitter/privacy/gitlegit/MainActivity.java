@@ -1,14 +1,17 @@
 package gitter.privacy.gitlegit;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.ViewGroup;
-import android.widget.Button;
+
+
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+
+//branch erdi
 
 public class MainActivity extends AppCompatActivity {
 
