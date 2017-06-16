@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.base_view);
         ButterKnife.bind(this);
 
+        //checking to see how to use caching : https://github.com/Pixplicity/EasyPreferences
+
         Log.d(TAG, "onCreate: going to do some preparing");
         switchToDifferentScreen(new JohnIntroFragment(), JohnIntroFragment.TAG, false);
     }

@@ -16,6 +16,8 @@
     <string name="volunteer_job_description">We are a small non-profit organization and we are looking for volunteerd
     to help us build several houses for the poor. We are in desperate need of help so you will be receiving minimum wage pay
     If you are interested, please apply below!</string>
+    <string name="fill_form_text_1">Alright, time to fill in my information! I have my ID card right here,
+        I just need to enter it just as it is on my ID</string>
 
 
 </resources>
