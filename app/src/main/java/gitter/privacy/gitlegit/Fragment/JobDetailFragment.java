@@ -10,6 +10,7 @@ import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import gitter.privacy.gitlegit.MainActivity;
 import gitter.privacy.gitlegit.R;
 
 /**
@@ -72,7 +73,7 @@ public class JobDetailFragment extends BaseFragment {
     @OnClick(R.id.applyBtn)
     public void doApply(){
         //TODO: show the aplication form for the user alongside his ID
-
+        ((MainActivity)getActivity()).switchToDifferentScreen(new FillOutFormFragment(), FillOutFormFragment.TAG, false);
     }
 
     public enum chosenJob{
