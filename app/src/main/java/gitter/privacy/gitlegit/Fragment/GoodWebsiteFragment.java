@@ -31,7 +31,7 @@ public class GoodWebsiteFragment extends BaseFragment {
         ButterKnife.bind(this, parentView);
         ((MainActivity)getActivity()).setStoryContainerVisible(false);
 
-        background.getBackground().setAlpha((int)0.5);
+        background.getBackground().setAlpha(25);
 
         return parentView;
     }

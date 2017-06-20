@@ -49,6 +49,8 @@ public class JobDetailFragment extends BaseFragment {
                 case VOLUNTEER_JOB:
                     currentJob = chosenJob.VOLUNTEER;
                     break;
+                case REAL_JOB:
+                    currentJob = chosenJob.LAWYER;
                 default:
                     currentJob = chosenJob.CLEANER;
                     break;
@@ -78,6 +80,6 @@ public class JobDetailFragment extends BaseFragment {
     }
 
     public enum chosenJob{
-        CLEANER, VOLUNTEER
+        CLEANER, VOLUNTEER, LAWYER
     }
 }
