@@ -16,43 +16,44 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:paddingLeft="5dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingLeft="5dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Please enter your information:"
             android:gravity="center"
-            android:textSize="20sp"/>
+            android:text="Please enter your information:"
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/username_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="3dp"
-            android:hint="enter your name here..." />
+            android:hint="enter your name here..."
+            android:paddingLeft="3dp" />
 
         <EditText
             android:id="@+id/userlastname_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="3dp"
-            android:hint="enter your name here..." />
+            android:hint="enter your name here..."
+            android:paddingLeft="3dp" />
 
         <EditText
             android:id="@+id/socialsecurity_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="3dp"
-            android:hint="enter your social security number..." />
+            android:hint="enter your social security number..."
+            android:paddingLeft="3dp" />
 
         <Button
             android:id="@+id/sendFormBtn"
+            style="@style/ApplyButton"
+
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="send"
-            style="@style/ApplyButton"/>
+            android:layout_height="30dp"
+            android:text="send" />
 
     </LinearLayout>
 

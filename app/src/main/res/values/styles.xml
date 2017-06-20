@@ -7,6 +7,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="SearchButton" parent="Theme.AppCompat.Light">
+        <item name="android:background">@drawable/search_btn</item>
+        <item name="android:textColor">@color/goals_red</item>
+    </style>
+
     <style name="ApplyButton" parent="Theme.AppCompat.Light">
         <item name="android:background">@drawable/apply_btn</item>
         <item name="android:textColor">@color/white</item>

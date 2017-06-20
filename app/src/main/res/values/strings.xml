@@ -18,6 +18,9 @@
     If you are interested, please apply below!</string>
     <string name="fill_form_text_1">Alright, time to fill in my information! I have my ID card right here,
         I just need to enter it just as it is on my ID</string>
+    <string name="search_engine_text1">Alright, let\'s search for the term: \'apply for job\'</string>
+    <string name="search_engine_wrong_text">That didn\'t seem to be the correct search term</string>
+    <string name="search_engine_no_results">No results found for \'%1$s\'</string>
 
 
 </resources>
