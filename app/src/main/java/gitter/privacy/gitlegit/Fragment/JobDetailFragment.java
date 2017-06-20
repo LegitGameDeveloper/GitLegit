@@ -29,6 +29,7 @@ public class JobDetailFragment extends BaseFragment {
     public static final String JOB_CHOSEN = "job_John_chose";
     public static final String CLEANER_JOB = "cleaner";
     public static final String VOLUNTEER_JOB = "volunteer";
+    public static final String REAL_JOB = "real_job";
     private chosenJob currentJob;
 
     @Nullable
