@@ -57,6 +57,7 @@ public class SearchEngineFragment extends BaseFragment {
         String textToEvaluate = searchBar.getText().toString();
         textToEvaluate = textToEvaluate.trim().replaceAll(" +", " ");
         if(textToEvaluate.equalsIgnoreCase("apply for job")){
+            ((MainActivity)getActivity()).setStoryContainerVisible(false);
             mSearchPageView.setVisibility(View.GONE);
             mResultsFoundView.setVisibility(View.VISIBLE);
         }else{
@@ -67,12 +68,12 @@ public class SearchEngineFragment extends BaseFragment {
 
     @OnClick(R.id.bad_website)
     public void goToBadWebsite(){
-        //todo: switch to the bad website
+        ((MainActivity)getActivity()).switchToDifferentScreen(new BadWebsiteFragment(), "BadWebsiteFragment", false);
     }
 
     @OnClick(R.id.good_website)
     public void goToGoodWebsite(){
-        //todo: switch to the good website
+        ((MainActivity)getActivity()).switchToDifferentScreen(new GoodWebsiteFragment(), "GoodWebsiteFragment", false);
     }
 
 }

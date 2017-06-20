@@ -31,7 +31,7 @@ public class GoodWebsiteFragment extends BaseFragment {
         ButterKnife.bind(this, parentView);
         ((MainActivity)getActivity()).setStoryContainerVisible(false);
 
-
+        background.getBackground().setAlpha((int)0.5);
 
         return parentView;
     }
@@ -68,7 +68,7 @@ public class GoodWebsiteFragment extends BaseFragment {
 
     @OnClick(R.id.back_btn)
     public void goBackToSearchResults(){
-        //todo: go back to search results
+        ((MainActivity)getActivity()).switchToDifferentScreen(new SearchEngineFragment(), SearchEngineFragment.TAG, false);
     }
 
 }
