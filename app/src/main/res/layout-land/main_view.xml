@@ -15,11 +15,10 @@
         <!-- IMAGE CONTAINER -->
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
-
-        </LinearLayout>
+            android:layout_height="wrap_content"
+            android:layout_weight="0.48"
+            android:background="@drawable/char"
+            >        </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
@@ -27,23 +26,6 @@
             android:layout_weight="1.5"
             android:orientation="horizontal"
             android:padding="10dp">
-
-            <Button
-                android:id="@+id/btn_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/ChoiceButton"
-                android:layout_marginRight="20dp"
-                android:text="Geef je BSN"
-                android:padding="5dp"/>
-
-            <Button
-                android:id="@+id/btn_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/ChoiceButton"
-                android:text="Geef je wachtwoord voor Google"
-                android:padding="5dp"/>
 
         </LinearLayout>
 
@@ -63,8 +45,7 @@
             android:layout_height="match_parent"
             android:textSize="20sp"
             android:padding="10dp"
-            android:text="Ziehier man, ik ben soort van een verhaal, wat ga je nu doen?"/>
-
+            android:text=""/>
     </LinearLayout>
 
 </LinearLayout>
