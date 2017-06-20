@@ -97,7 +97,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Info: \n'Optional<Clean>' is an established cleaning company, looking for new employees to help out!\n\nWage:2300" />
+                    android:text="Info: \n'Optional Clean' is an established cleaning company, looking for new employees to help out!\n\nWage:2300" />
             </LinearLayout>
 
             <LinearLayout
