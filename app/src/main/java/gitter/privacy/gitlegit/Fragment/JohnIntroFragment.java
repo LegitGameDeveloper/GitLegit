@@ -6,25 +6,43 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
 import gitter.privacy.gitlegit.MainActivity;
 import gitter.privacy.gitlegit.R;
+
+import static gitter.privacy.gitlegit.R.id.QuestionToAsk;
+import static gitter.privacy.gitlegit.R.id.button1;
+import static gitter.privacy.gitlegit.R.id.button2;
 
 /**
  * Created by jahmale_c on 15/06/2017.
  */
 
-public class JohnIntroFragment extends BaseFragment {
+public class JohnIntroFragment extends BaseFragment implements View.OnClickListener {
 
     public static final String TAG = "JohnIntroFragment";
     private boolean containerIsVisible = false;
     private int textCounter = 0;
 
+    Button myButton1, myButton2;
+    TextView textview1;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         setTextContainerListener();
-        return bindXMLToFragment(R.layout.john_intro_view, inflater, container);
+        parentView = bindXMLToFragment(R.layout.john_intro_view, inflater, container);
+
+        myButton1 = (Button) parentView.findViewById(button1);
+        myButton1.setOnClickListener(this);
+        myButton2 = (Button) parentView.findViewById(button2);
+        myButton2.setOnClickListener(this);
+
+        textview1 = (TextView) parentView.findViewById(QuestionToAsk);
+
+        return parentView;
     }
 
     public void setTextContainerListener(){
@@ -55,15 +73,18 @@ public class JohnIntroFragment extends BaseFragment {
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_introduction_2),"John");
                     break;
                 case 4:
-                    ((MainActivity)getActivity()).switchToDifferentScreen(new SearchingForJobFragment(),SearchingForJobFragment.TAG, false);
-
+ //                   ((MainActivity)getActivity()).switchToDifferentScreen(new SearchingForJobFragment(),SearchingForJobFragment.TAG, false);
 
 
                 case 5:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_1),"");
                     break;
                 case 6:
-                    ((MainActivity)getActivity()).switchToDifferentScreen(new PopopQuestionFragment(),PopopQuestionFragment.TAG, false);
+                    myButton1.setVisibility(View.VISIBLE);
+                    myButton2.setVisibility(View.VISIBLE);
+                    textview1.setVisibility(View.VISIBLE);
+                    ((MainActivity)getActivity()).setStoryContainerVisible(false);
+
                 case 7:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_2),"Supermarket seller Patrick");
                     break;
@@ -105,4 +126,28 @@ public class JohnIntroFragment extends BaseFragment {
             textCounter++;
         }
     };
+
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case button1:
+                myButton1.setVisibility(View.INVISIBLE);
+                myButton2.setVisibility(View.INVISIBLE);
+                textview1.setVisibility(View.INVISIBLE);
+                ((MainActivity)getActivity()).setStoryContainerVisible(true);
+                // keuze 1
+
+                break;
+            case button2:
+                myButton1.setVisibility(View.INVISIBLE);
+                myButton2.setVisibility(View.INVISIBLE);
+                textview1.setVisibility(View.INVISIBLE);
+                ((MainActivity)getActivity()).setStoryContainerVisible(true);
+                // keuze 2
+
+            default:
+                break;
+        }
+    }
 }

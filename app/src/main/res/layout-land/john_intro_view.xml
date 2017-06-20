@@ -3,4 +3,41 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/QuestionToAsk"
+        android:layout_width="match_parent"
+        android:layout_height="31dp"
+        android:layout_weight="0.07"
+        android:text="Which supermarket would you like to visit?"
+        android:visibility="invisible"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button1"
+            style="@style/ApplyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Aldi"
+            android:visibility="invisible"
+            />
+
+        <Button
+            android:id="@+id/button2"
+            style="@style/ApplyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Bad store"
+            android:visibility="invisible"
+            />
+    </LinearLayout>
+
+
 </LinearLayout>
