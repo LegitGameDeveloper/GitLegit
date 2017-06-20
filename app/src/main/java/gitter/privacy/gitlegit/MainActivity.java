@@ -27,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.storyTeller)
     TextView mStoryTeller;
 
+    private boolean wrongWebsiteChosen = false;
+    private boolean wrongApplicationSent = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +40,14 @@ public class MainActivity extends AppCompatActivity {
 
         Log.d(TAG, "onCreate: going to do some preparing");
         switchToDifferentScreen(new JohnIntroFragment(), JohnIntroFragment.TAG, false);
+    }
+
+    public void setWrongWebsiteChosen(boolean wrongWebsiteChosen){
+        this.wrongWebsiteChosen = wrongWebsiteChosen;
+    }
+
+    public void setWrongApplicationSent(boolean wrongApplicationSent){
+        this.wrongApplicationSent = wrongApplicationSent;
     }
 
     public void setStoryText(String textToDisplayInBubble, String personTalking){

@@ -16,14 +16,14 @@ import gitter.privacy.gitlegit.R;
  * Created by jahmale_c on 15/06/2017.
  */
 
-public class SearchingForJobFragment extends BaseFragment {
+public class GoodWebsiteFragment extends BaseFragment {
 
-    public static final String TAG = "SearchingForJobFragment";
+    public static final String TAG = "GoodWebsiteFragment";
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        parentView = bindXMLToFragment(R.layout.linked_in_view, inflater, container);
+        parentView = bindXMLToFragment(R.layout.good_website_view, inflater, container);
         ButterKnife.bind(this, parentView);
         ((MainActivity)getActivity()).setStoryContainerVisible(false);
 
