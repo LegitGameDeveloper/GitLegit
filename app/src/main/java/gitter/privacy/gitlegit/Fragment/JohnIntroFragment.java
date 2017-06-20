@@ -56,6 +56,48 @@ public class JohnIntroFragment extends BaseFragment {
                     break;
                 case 4:
                     ((MainActivity)getActivity()).switchToDifferentScreen(new SearchingForJobFragment(),SearchingForJobFragment.TAG, false);
+
+
+
+                case 5:
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_1),"");
+                    break;
+                case 6:
+                    ((MainActivity)getActivity()).switchToDifferentScreen(new PopopQuestionFragment(),PopopQuestionFragment.TAG, false);
+                case 7:
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_2),"Supermarket seller Patrick");
+                    break;
+                case 8:
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_3),"Supermarket seller Patrick");
+                    break;
+                case 9:
+//                    ((MainActivity)getActivity()).switchToDifferentScreen(new RegisterSupermarketFragment(),RegisterSupermarketFragment.TAG, false);
+                    break;
+                case 10:
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_4), "Supermarket seller Patrick");
+                    break;
+                case 11:
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_5), "Supermarket seller Patrick");
+                    break;
+
+                case 12:
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_1), "John");
+                    break;
+                case 13:
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_2), "John");
+                    break;
+
+                case 14:
+//                    question which fast food to visit
+                    break;
+
+                case 15:
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_3), "John");
+                    break;
+                case 16:
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_3), "Waiter Linda");
+                    break;
+
                 default:
                     Log.e(TAG, "playStory: unknown story counter for introduction given, why u do dis");
             }
