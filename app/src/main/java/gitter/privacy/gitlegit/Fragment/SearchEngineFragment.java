@@ -24,6 +24,16 @@ public class SearchEngineFragment extends BaseFragment {
     public static final String TAG = "SearchEngineFragment";
     @BindView(R.id.search_et)
     EditText searchBar;
+    @BindView(R.id.bad_website)
+    ViewGroup mBadWebsite;
+    @BindView(R.id.good_website)
+    ViewGroup mGoodWebsite;
+    @BindView(R.id.no_results_view)
+    ViewGroup mNoResultView;
+    @BindView(R.id.results_found_view)
+    ViewGroup mResultsFoundView;
+    @BindView(R.id.searchpage_view)
+    ViewGroup mSearchPageView;
 
     @Nullable
     @Override
@@ -48,14 +58,23 @@ public class SearchEngineFragment extends BaseFragment {
     public void doSearch(){
         String textToEvaluate = searchBar.getText().toString();
         textToEvaluate = textToEvaluate.trim().replaceAll(" +", " ");
-
         if(textToEvaluate.equalsIgnoreCase("apply for job")){
-            //todo: change view to the 'two results' view
-            Toast.makeText(getActivity(), "Alright, let's make job, yes?", Toast.LENGTH_SHORT).show();
+            mSearchPageView.setVisibility(View.GONE);
+            mResultsFoundView.setVisibility(View.VISIBLE);
         }else{
-            //todo: change the view to 'no results found'
-            Toast.makeText(getActivity(), searchBar.getText().toString().trim(),Toast.LENGTH_SHORT).show();
+            mSearchPageView.setVisibility(View.GONE);
+            mNoResultView.setVisibility(View.VISIBLE);
         }
-
     }
+
+    @OnClick(R.id.bad_website)
+    public void goToBadWebsite(){
+        //todo: switch to the bad website
+    }
+
+    @OnClick(R.id.good_website)
+    public void goToGoodWebsite(){
+        //todo: switch to the good website
+    }
+
 }

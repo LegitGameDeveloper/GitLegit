@@ -7,8 +7,7 @@
         android:id="@+id/searchpage_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:visibility="gone">
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
@@ -87,54 +86,94 @@
         android:id="@+id/results_found_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:visibility="gone">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
             android:text="getSearched!"
-            android:textStyle="bold"
-            android:textColor="@color/goals_red"/>
+            android:textColor="@color/goals_red"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="@color/linkedInBlue"
-            android:layout_marginTop="3dp"/>
+            android:layout_marginTop="3dp"
+            android:background="@color/linkedInBlue" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="2 results found.."/>
 
         <LinearLayout
+            android:id="@+id/bad_website"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/black_border"
+            android:orientation="vertical"
             android:padding="10dp"
-            android:orientation="vertical">
+            android:layout_margin="5dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:text="jobFinder: Searching for jobs, apply here..."/>
+                android:text="jobFinder: Searching for jobs, apply here..."
+                android:textSize="14sp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="10sp"
+                android:text="http://www.jobfinder.com/"
                 android:textColor="@color/linkedInBlue"
-                android:text="http://www.jobfinder.com/"/>
+                android:textSize="10sp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="10sp"
+                android:text="JobFinder, has been known to provide over 20 000 users with jobs yearly."
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/good_website"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/black_border"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="getLinked: 10 000 users, 100 companies..."
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="https://www.getlinked.com/"
                 android:textColor="@color/linkedInBlue"
-                android:text="JobFinder, has been known to provide over 20 000"/>
+                android:textSize="10sp" />
 
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="getLinked is a new startup, with over 3000 succesful cases of delivering jobs for users."
+                android:textColor="@color/black"
+                android:textSize="10sp" />
         </LinearLayout>
 
     </LinearLayout>
-
-
 
 
 </LinearLayout>
