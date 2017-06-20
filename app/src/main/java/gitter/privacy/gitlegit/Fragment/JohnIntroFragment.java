@@ -7,12 +7,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import gitter.privacy.gitlegit.MainActivity;
 import gitter.privacy.gitlegit.R;
 
-import static gitter.privacy.gitlegit.R.id.QuestionToAsk;
 import static gitter.privacy.gitlegit.R.id.button1;
 import static gitter.privacy.gitlegit.R.id.button2;
 
@@ -26,21 +28,25 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
     private boolean containerIsVisible = false;
     private int textCounter = 0;
 
-    Button myButton1, myButton2;
+    Button myButton1, myButton2, myRegisterButton;
+
+    @BindView(R.id.QuestionToAsk)
     TextView textview1;
+
+    EditText editText1, editText2, editText3, editText4, editText5;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         setTextContainerListener();
         parentView = bindXMLToFragment(R.layout.john_intro_view, inflater, container);
+        ButterKnife.bind(this, parentView);
 
         myButton1 = (Button) parentView.findViewById(button1);
         myButton1.setOnClickListener(this);
         myButton2 = (Button) parentView.findViewById(button2);
         myButton2.setOnClickListener(this);
 
-        textview1 = (TextView) parentView.findViewById(QuestionToAsk);
 
         return parentView;
     }
@@ -92,8 +98,8 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_3),"Supermarket seller Patrick");
                     break;
                 case 9:
-//                    ((MainActivity)getActivity()).switchToDifferentScreen(new RegisterSupermarketFragment(),RegisterSupermarketFragment.TAG, false);
-                    break;
+
+
                 case 10:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_4), "Supermarket seller Patrick");
                     break;
@@ -113,7 +119,6 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     myButton2.setVisibility(View.VISIBLE);
                     textview1.setVisibility(View.VISIBLE);
                     ((MainActivity)getActivity()).setStoryContainerVisible(false);
-                    break;
 
                 case 14:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_3), "John");
@@ -138,21 +143,18 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case button1:
+            case button1: // keuze 1
                 myButton1.setVisibility(View.INVISIBLE);
                 myButton2.setVisibility(View.INVISIBLE);
                 textview1.setVisibility(View.INVISIBLE);
                 ((MainActivity)getActivity()).setStoryContainerVisible(true);
-                // keuze 1
-
                 break;
-            case button2:
+            case button2: // keuze 2
                 myButton1.setVisibility(View.INVISIBLE);
                 myButton2.setVisibility(View.INVISIBLE);
                 textview1.setVisibility(View.INVISIBLE);
                 ((MainActivity)getActivity()).setStoryContainerVisible(true);
-                // keuze 2
-
+                break;
             default:
                 break;
         }
