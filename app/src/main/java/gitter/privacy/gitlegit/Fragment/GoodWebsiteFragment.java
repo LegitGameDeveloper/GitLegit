@@ -32,6 +32,7 @@ public class GoodWebsiteFragment extends BaseFragment {
         ((MainActivity)getActivity()).setStoryContainerVisible(false);
 
 
+
         return parentView;
     }
 
@@ -45,7 +46,7 @@ public class GoodWebsiteFragment extends BaseFragment {
         ((MainActivity)getActivity()).switchToDifferentScreen(fragment,JobDetailFragment.TAG, false);
     }
 
-    @OnClick(R.id.volunteer_job)
+    @OnClick(R.id.lawyer_job)
     public void goToVolunteerJobDetail(){
         JobDetailFragment fragment = new JobDetailFragment();
         Bundle bundle = new Bundle();
