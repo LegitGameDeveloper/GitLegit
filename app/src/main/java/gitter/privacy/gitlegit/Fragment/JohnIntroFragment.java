@@ -98,22 +98,29 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_4), "Supermarket seller Patrick");
                     break;
                 case 11:
-                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_5), "Supermarket seller Patrick");
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_1), "John");
                     break;
 
                 case 12:
-                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_1), "John");
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_2), "John");
                     break;
                 case 13:
-                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_2), "John");
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_2_5), "John");
+                    textview1.setText(R.string.john_scenario3_2_question);
+                    myButton1.setText(R.string.john_scenario3_2_answer_mac);
+                    myButton2.setText(R.string.john_scenario3_2_answer_2);
+                    myButton1.setVisibility(View.VISIBLE);
+                    myButton2.setVisibility(View.VISIBLE);
+                    textview1.setVisibility(View.VISIBLE);
+                    ((MainActivity)getActivity()).setStoryContainerVisible(false);
                     break;
 
                 case 14:
-//                    question which fast food to visit
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_3), "John");
                     break;
 
                 case 15:
-                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_3), "John");
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_4), "Waiter Linda");
                     break;
                 case 16:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_3), "Waiter Linda");

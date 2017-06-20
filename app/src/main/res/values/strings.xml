@@ -29,8 +29,17 @@
 
     <string name="john_scenario3_1"> Well finally I got my groceries, but I’m quite hungry now and don’t want to cook something right away. Maybe some fast food will keep me up.. </string>
     <string name="john_scenario3_2"> Too many choices, where should I go? I’m quite short on cash as well, lets take a look at places that give discounts for now </string>
+    <string name="john_scenario3_2_5"> </string>
+    <string name="john_scenario3_2_question">Where would you like to eat?</string>
+    <string name="john_scenario3_2_answer_mac"> McDonald’s</string>
+    <string name="john_scenario3_2_answer_2"> Burger King</string>
+
     <string name="john_scenario3_3"> hmm looks good, I’m so hungry right now! </string>
     <string name="john_scenario3_4"> Hi Sir! Did you take a look at our great deals for today? You can get 50% discount on anything you order by making a selfie with your order on Instagram, Facebook or Twitter”. Do you want to take this deal?</string>
+    <string name="john_scenario3_4_question"> Do you want to take this offer?</string>
+    <string name="john_scenario3_4_answer_1">Yes</string>
+    <string name="john_scenario3_4_answer_2">No</string>
+
     <string name="john_scenario3_5"> You take a selfie post it on social media, receive the discount and leave.</string>
     <string name="john_scenario3_6"> Two weeks later . . .[TODO picture selfie on billboard in random country]</string>
     <string name="john_scenario3_7"> Well actually I don’t have enough money left to buy something without discount. Lets head back home I have got to cook something for myself now.</string>
