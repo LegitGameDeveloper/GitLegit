@@ -1,5 +1,6 @@
 package gitter.privacy.gitlegit.Fragment;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -41,6 +42,8 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
 
     EditText editText1, editText2, editText3, editText4, editText5;
 
+    SharedPreferences sharedPref;
+
 
     @Nullable
     @Override
@@ -61,6 +64,8 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
         editText5 = (EditText) parentView.findViewById(supermarket_email);
         myRegisterButton = (Button) parentView.findViewById(supermarket_signup);
         myRegisterButton.setOnClickListener(this);
+
+        sharedPref = getActivity().getSharedPreferences("MyPref", 0);
 
         return parentView;
     }
@@ -111,7 +116,7 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                 case 8:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_3),"Supermarket seller Patrick");
                     break;
-                case 9:
+                case 9: // register form
                     editText1.setVisibility(View.VISIBLE);
                     editText2.setVisibility(View.VISIBLE);
                     editText3.setVisibility(View.VISIBLE);
@@ -120,6 +125,8 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     myRegisterButton.setVisibility(View.VISIBLE);
                     ((MainActivity)getActivity()).setStoryContainerVisible(false);
                 case 10:
+                    System.out.println(sharedPref.getString("Name", null)); //test
+                    System.out.println(sharedPref.getString("Birthday", null)); //test
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_4), "Supermarket seller Patrick");
                     break;
                 case 11:
@@ -180,9 +187,15 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                 textview1.setVisibility(View.INVISIBLE);
                 ((MainActivity)getActivity()).setStoryContainerVisible(true);
                 break;
-            case supermarket_signup: // register button
+            case supermarket_signup:
+                SharedPreferences.Editor editor = sharedPref.edit();
 
-
+                editor.putString("Name", editText1.getText().toString());
+                editor.putString("Birthday", editText2.getText().toString());
+                editor.putString("Resident", editText3.getText().toString());
+                editor.putString("Cellphonenr", editText4.getText().toString());
+                editor.putString("email", editText5.getText().toString());
+                editor.commit();
 
                 editText1.setVisibility(View.INVISIBLE);
                 editText2.setVisibility(View.INVISIBLE);
