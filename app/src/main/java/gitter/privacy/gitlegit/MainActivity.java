@@ -1,20 +1,18 @@
 package gitter.privacy.gitlegit;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 import gitter.privacy.gitlegit.Fragment.JohnIntroFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     TextView mStoryText;
     @BindView(R.id.storyTeller)
     TextView mStoryTeller;
+
+    public static final String shopping_name = "shopping_name";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

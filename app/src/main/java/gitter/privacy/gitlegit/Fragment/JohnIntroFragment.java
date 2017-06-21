@@ -17,6 +17,12 @@ import gitter.privacy.gitlegit.R;
 
 import static gitter.privacy.gitlegit.R.id.button1;
 import static gitter.privacy.gitlegit.R.id.button2;
+import static gitter.privacy.gitlegit.R.id.supermarket_birthday;
+import static gitter.privacy.gitlegit.R.id.supermarket_cellphomeNR;
+import static gitter.privacy.gitlegit.R.id.supermarket_email;
+import static gitter.privacy.gitlegit.R.id.supermarket_name;
+import static gitter.privacy.gitlegit.R.id.supermarket_resident;
+import static gitter.privacy.gitlegit.R.id.supermarket_signup;
 
 /**
  * Created by jahmale_c on 15/06/2017.
@@ -35,6 +41,7 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
 
     EditText editText1, editText2, editText3, editText4, editText5;
 
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -47,6 +54,13 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
         myButton2 = (Button) parentView.findViewById(button2);
         myButton2.setOnClickListener(this);
 
+        editText1 = (EditText) parentView.findViewById(supermarket_name);
+        editText2 = (EditText) parentView.findViewById(supermarket_birthday);
+        editText3 = (EditText) parentView.findViewById(supermarket_resident);
+        editText4 = (EditText) parentView.findViewById(supermarket_cellphomeNR);
+        editText5 = (EditText) parentView.findViewById(supermarket_email);
+        myRegisterButton = (Button) parentView.findViewById(supermarket_signup);
+        myRegisterButton.setOnClickListener(this);
 
         return parentView;
     }
@@ -98,8 +112,13 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_3),"Supermarket seller Patrick");
                     break;
                 case 9:
-
-
+                    editText1.setVisibility(View.VISIBLE);
+                    editText2.setVisibility(View.VISIBLE);
+                    editText3.setVisibility(View.VISIBLE);
+                    editText4.setVisibility(View.VISIBLE);
+                    editText5.setVisibility(View.VISIBLE);
+                    myRegisterButton.setVisibility(View.VISIBLE);
+                    ((MainActivity)getActivity()).setStoryContainerVisible(false);
                 case 10:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_4), "Supermarket seller Patrick");
                     break;
@@ -110,6 +129,7 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                 case 12:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_2), "John");
                     break;
+
                 case 13:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_2_5), "John");
                     textview1.setText(R.string.john_scenario3_2_question);
@@ -153,6 +173,18 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                 myButton1.setVisibility(View.INVISIBLE);
                 myButton2.setVisibility(View.INVISIBLE);
                 textview1.setVisibility(View.INVISIBLE);
+                ((MainActivity)getActivity()).setStoryContainerVisible(true);
+                break;
+            case supermarket_signup: // register button
+
+
+
+                editText1.setVisibility(View.INVISIBLE);
+                editText2.setVisibility(View.INVISIBLE);
+                editText3.setVisibility(View.INVISIBLE);
+                editText4.setVisibility(View.INVISIBLE);
+                editText5.setVisibility(View.INVISIBLE);
+                myRegisterButton.setVisibility(View.INVISIBLE);
                 ((MainActivity)getActivity()).setStoryContainerVisible(true);
                 break;
             default:

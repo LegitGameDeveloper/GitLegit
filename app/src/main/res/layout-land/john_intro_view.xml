@@ -3,28 +3,89 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/QuestionToAsk"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="31dp"
-        android:layout_weight="0.07"
-        android:text="Which supermarket would you like to visit?"
-        android:visibility="invisible"
-        />
+        android:layout_height="400dp"
+        android:layout_weight="1"
+        android:layout_marginTop="0dp"
+        >
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/supermarket_name"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:visibility="invisible"
+            />
+
+        <EditText
+            android:id="@+id/supermarket_birthday"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:inputType="textPersonName"
+            android:text="Birthday"
+            android:visibility="invisible"
+            />
+
+        <EditText
+            android:id="@+id/supermarket_resident"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Resident"
+            android:visibility="invisible"
+            />
+
+        <EditText
+            android:id="@+id/supermarket_cellphomeNR"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Cellphone"
+            android:visibility="invisible"
+            />
+
+        <EditText
+            android:id="@+id/supermarket_email"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="160dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:text="Email"
+            android:visibility="invisible"
+            />
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/supermarket_signup"
             style="@style/ApplyButton"
-            android:layout_width="wrap_content"
+            android:layout_width="95dp"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="Aldi"
+            android:layout_marginTop="200dp"
+            android:text="Sign up!"
+            android:visibility="invisible" />
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_weight="1"
+        android:layout_marginTop="-250dp"
+        >
+
+        <TextView
+            android:id="@+id/QuestionToAsk"
+            android:layout_width="684dp"
+            android:text="Which supermarket would you like to visit?"
+            android:layout_height="100dp"
             android:visibility="invisible"
             />
 
@@ -33,9 +94,24 @@
             style="@style/ApplyButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_marginLeft="330dp"
+            android:layout_marginRight="210dp"
+            android:layout_marginTop="130dp"
             android:text="Bad store"
             android:visibility="invisible"
             />
-    </LinearLayout>
+
+        <Button
+            android:id="@+id/button1"
+            style="@style/ApplyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="230dp"
+            android:layout_marginRight="200dp"
+            android:layout_marginTop="130dp"
+            android:text="Aldi"
+            android:visibility="invisible"
+            />
+
+    </FrameLayout>
 </LinearLayout>
