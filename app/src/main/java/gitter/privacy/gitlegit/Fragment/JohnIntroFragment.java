@@ -44,6 +44,9 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
     EditText editText1, editText2, editText3, editText4, editText5;
 
     SharedPreferences sharedPref;
+    SharedPreferences sharedPrefChoices;
+
+    int stap;
 
 
     @Nullable
@@ -67,6 +70,7 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
         myRegisterButton.setOnClickListener(this);
 
         sharedPref = getActivity().getSharedPreferences("MyPref", 0);
+        sharedPrefChoices = getActivity().getSharedPreferences("MyPref", 0);
 
         return parentView;
     }
@@ -106,6 +110,7 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_1),"");
                     break;
                 case 6:
+                    stap = 1;
                     myButton1.setVisibility(View.VISIBLE);
                     myButton2.setVisibility(View.VISIBLE);
                     textview1.setVisibility(View.VISIBLE);
@@ -119,7 +124,7 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     break;
 
                 case 9:
-
+                    stap = 2;
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_4_5), " ");
                     textview1.setText(R.string.john_scenario3_4_question);
                     myButton1.setText(R.string.john_scenario3_4_answer_1);
@@ -150,6 +155,7 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     break;
 
                 case 14:
+                    stap = 3;
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_2_5), "John");
                     textview1.setText(R.string.john_scenario3_2_question);
                     myButton1.setText(R.string.john_scenario3_2_answer_mac);
@@ -166,6 +172,7 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_4), "Waiter Linda");
                     break;
                 case 17:
+                    stap = 4;
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_4_5), "John");
                     textview1.setText(R.string.john_scenario3_4_question);
                     myButton1.setText(R.string.john_scenario3_4_answer_1);
@@ -174,6 +181,12 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     myButton2.setVisibility(View.VISIBLE);
                     textview1.setVisibility(View.VISIBLE);
                     ((MainActivity)getActivity()).setStoryContainerVisible(false);
+
+
+                    System.out.println(sharedPrefChoices.getString("stap1", null));
+                    System.out.println(sharedPrefChoices.getString("stap2", null));
+                    System.out.println(sharedPrefChoices.getString("stap3", null));
+                    System.out.println(sharedPrefChoices.getString("stap4", null));
                 case 109:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_4_no), "John");
                     textCounter=textCounter-98;
@@ -198,14 +211,37 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        SharedPreferences.Editor edit = sharedPrefChoices.edit();
+
         switch (v.getId()) {
             case button1: // keuze 1
+                if (stap == 1) {
+                    edit.putString("stap1", "aldi");
+                } else if (stap == 2) {
+                    edit.putString("stap2", "yes");
+                } else if (stap == 3) {
+                    edit.putString("stap3", "McDonalds");
+                } else if (stap == 4) {
+                    edit.putString("stap4", "yes");
+                }
+
+                edit.commit();
                 myButton1.setVisibility(View.INVISIBLE);
                 myButton2.setVisibility(View.INVISIBLE);
                 textview1.setVisibility(View.INVISIBLE);
                 ((MainActivity)getActivity()).setStoryContainerVisible(true);
                 break;
             case button2: // keuze 2
+                if (stap == 1) {
+                    edit.putString("stap1", "badsupermarket");
+                } else if (stap == 2) {
+                    edit.putString("stap2", "no");
+                } else if (stap == 3) {
+                    edit.putString("stap3", "BurgerKing");
+                } else if (stap == 4) {
+                    edit.putString("stap4", "no");
+                }
+                edit.commit();
                 myButton1.setVisibility(View.INVISIBLE);
                 myButton2.setVisibility(View.INVISIBLE);
                 textview1.setVisibility(View.INVISIBLE);
