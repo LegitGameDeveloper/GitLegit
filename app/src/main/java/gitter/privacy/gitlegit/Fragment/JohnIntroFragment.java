@@ -123,7 +123,7 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_4), "Supermarket seller Patrick");
                     break;
                 case 11:
-                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_1), "John");
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_5), "John");
                     break;
 
                 case 12:
@@ -143,18 +143,23 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                 case 14:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_3), "John");
                     break;
-
                 case 15:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_4), "Waiter Linda");
                     break;
                 case 16:
-                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_3), "Waiter Linda");
-                    break;
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_4_5), "John");
+                    textview1.setText(R.string.john_scenario3_4_question);
+                    myButton1.setText(R.string.john_scenario3_4_answer_1);
+                    myButton2.setText(R.string.john_scenario3_4_answer_2);
+                    myButton1.setVisibility(View.VISIBLE);
+                    myButton2.setVisibility(View.VISIBLE);
+                    textview1.setVisibility(View.VISIBLE);
+                    ((MainActivity)getActivity()).setStoryContainerVisible(false);
 
+                case 17:
                 default:
                     Log.e(TAG, "playStory: unknown story counter for introduction given, why u do dis");
             }
-
             textCounter++;
         }
     };
