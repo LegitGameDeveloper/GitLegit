@@ -5,7 +5,6 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -38,32 +37,32 @@ public class GoodWebsiteFragment extends BaseFragment {
 
     @OnClick(R.id.cleaner_job)
     public void goToCleanerJobDetail(){
-        JobDetailFragment fragment = new JobDetailFragment();
+        GoodJobDetailFragment fragment = new GoodJobDetailFragment();
         Bundle bundle = new Bundle();
-        bundle.putString(JobDetailFragment.JOB_CHOSEN, JobDetailFragment.CLEANER_JOB);
+        bundle.putString(GoodJobDetailFragment.JOB_CHOSEN, GoodJobDetailFragment.CLEANER_JOB);
         fragment.setArguments(bundle);
 
-        ((MainActivity)getActivity()).switchToDifferentScreen(fragment,JobDetailFragment.TAG, false);
+        ((MainActivity)getActivity()).switchToDifferentScreen(fragment, GoodJobDetailFragment.TAG, false);
     }
 
     @OnClick(R.id.lawyer_job)
-    public void goToVolunteerJobDetail(){
-        JobDetailFragment fragment = new JobDetailFragment();
+    public void goToLawyerJobDetail(){
+        GoodJobDetailFragment fragment = new GoodJobDetailFragment();
         Bundle bundle = new Bundle();
-        bundle.putString(JobDetailFragment.JOB_CHOSEN, JobDetailFragment.VOLUNTEER_JOB);
+        bundle.putString(GoodJobDetailFragment.JOB_CHOSEN, GoodJobDetailFragment.LAWYER_JOB);
         fragment.setArguments(bundle);
 
-        ((MainActivity)getActivity()).switchToDifferentScreen(fragment,JobDetailFragment.TAG, false);
+        ((MainActivity)getActivity()).switchToDifferentScreen(fragment, GoodJobDetailFragment.TAG, false);
     }
 
     @OnClick(R.id.real_job)
     public void goToRealJobDetail(){
-        JobDetailFragment fragment = new JobDetailFragment();
+        GoodJobDetailFragment fragment = new GoodJobDetailFragment();
         Bundle bundle = new Bundle();
-        bundle.putString(JobDetailFragment.JOB_CHOSEN,JobDetailFragment.REAL_JOB);
+        bundle.putString(GoodJobDetailFragment.JOB_CHOSEN, GoodJobDetailFragment.REAL_JOB);
         fragment.setArguments(bundle);
 
-        ((MainActivity)getActivity()).switchToDifferentScreen(fragment, JobDetailFragment.TAG, false);
+        ((MainActivity)getActivity()).switchToDifferentScreen(fragment, GoodJobDetailFragment.TAG, false);
     }
 
     @OnClick(R.id.back_btn)

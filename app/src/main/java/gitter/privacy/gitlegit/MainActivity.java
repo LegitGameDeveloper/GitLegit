@@ -50,6 +50,10 @@ public class MainActivity extends AppCompatActivity {
         this.wrongApplicationSent = wrongApplicationSent;
     }
 
+    public void bringStoryToFront(){
+        mStoryContainer.bringToFront();
+    }
+
     public void setStoryText(String textToDisplayInBubble, String personTalking){
         if(mStoryContainer.getVisibility() == View.INVISIBLE || mStoryContainer.getVisibility() == View.INVISIBLE){
             Log.e(TAG, "setStoryText: the story container(Bubble is not visible," +
@@ -72,6 +76,14 @@ public class MainActivity extends AppCompatActivity {
      * @param listener
      */
     public void setmStoryContainerListener(View.OnClickListener listener){
+        if(listener == null){
+            listener = new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //don't do anything
+                }
+            };
+        }
         mStoryContainer.setOnClickListener(listener);
     }
 

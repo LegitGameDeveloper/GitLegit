@@ -70,6 +70,7 @@
         android:layout_marginTop="3dp"/>
 
     <FrameLayout
+        android:id="@+id/frame_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/transparent_grey">
@@ -78,6 +79,7 @@
             android:id="@+id/sendMailView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="10dp"
             android:layout_gravity="center_horizontal"
             android:orientation="vertical"
             android:visibility="gone"
@@ -89,6 +91,7 @@
                 android:src="@drawable/ic_mail"/>
 
             <TextView
+                android:id="@+id/mail_sender"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
@@ -179,11 +182,72 @@
 
                 <Button
                     android:id="@+id/applyBtn"
+                    style="@style/ApplyButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:text="apply"
-                    style="@style/ApplyButton"/>
+                    android:text="apply" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sketchy_popup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:background="@color/beige"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/sketchy_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SEARCHING FOR EMPLOYS!!"
+                android:textColor="@color/goals_red"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="HIGH SALARIES, ENTER YOUR NUMBER BELOW FOR A CHANCE TO BE HIRED FOR PROMINENT COMPANY!"/>
+
+            <TextView
+                android:id="@+id/sketch_tel"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/black_border"
+                android:paddingStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:text="tel: "/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/sketch_cancel_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:text="cancel"/>
+
+                <Button
+                    android:id="@+id/sketchy_send_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/goals_red"
+                    android:background="@android:color/transparent"
+                    android:text="send"/>
 
             </LinearLayout>
 

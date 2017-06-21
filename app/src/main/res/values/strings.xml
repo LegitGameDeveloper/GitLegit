@@ -9,9 +9,9 @@
         I’m at this point.Looking for a job. My Friends told me that getLinked is a good way to start searching for work.</string>
     <string name="john_introduction_2">Unfortunately, I don’t have any personal computer.
         Let’s go to the Internet Cafe. I need to go to the Internet Café in the neighborhood.</string>
-    <string name="cleaner_job_title">CLEANERS WANTED!!</string>
-    <string name="cleaner_job_description">We are a large company looking for cleaners to clean stuff!\n
-    The pay is very high, you will be nicely compensated, interested? then please apply!</string>
+    <string name="cleaner_job_title">looking for a cleaner</string>
+    <string name="cleaner_job_description">Info: \n\'Optional Clean\' is an established cleaning company,
+        looking for new employees to help out!\n\nWage:2300</string>
     <string name="volunteer_job_title">Looking for volunteers, (Minimum wage)</string>
     <string name="volunteer_job_description">We are a small non-profit organization and we are looking for volunteerd
     to help us build several houses for the poor. We are in desperate need of help so you will be receiving minimum wage pay
@@ -21,6 +21,11 @@
     <string name="search_engine_text1">Alright, let\'s search for the term: \'apply for job\'</string>
     <string name="search_engine_wrong_text">That didn\'t seem to be the correct search term</string>
     <string name="search_engine_no_results">No results found for \'%1$s\'</string>
+    <string name="lawyer_job_title">Lawyer intern wanted!</string>
+    <string name="lawyer_job_description">Info: \n\'BetterCallSomeLawyers\' has been active in the political
+        field for decades, will you join them?\n\nWage: 4500 monthly</string>
+    <string name="legit_job_title">Looking For: Assistent</string>
+    <string name="legit_job_description">Info: \n\'FreshUp\' is an up and coming real estate agency, looking for an assistent to help us out\n\nWage:1500</string>
 
 
 </resources>
