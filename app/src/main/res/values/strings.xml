@@ -22,7 +22,9 @@
     <string name="john_scenario2_2">Good day Sir, welcome we have a great deal for today. All you need to do is to fill in this form and you will receive a card where you will get daily discount from our store. Great right?..
 </string>
     <string name="john_scenario2_3">First you need to fill a form on our iPad and we will print the card for you. It will only take 2 minutes of your time.”</string>
+    //sss
     <string name="john_scenario2_4">Thank you for filling in the form. You will receive the deal right away by showing your card to the cashier. She will scan your card and after that you will receive the discount. </string>
+    <string name="john_scenario2_4_no">ssssss </string>
     <string name="john_scenario2_5"> Well finally I got my groceries, but I’m quite hungry now and don’t want to cook something right away. Maybe some fast food will keep me up.. </string>
 
     <string name="john_scenario3_2"> Too many choices, where should I go? I’m quite short on cash as well, lets take a look at places that give discounts for now </string>
