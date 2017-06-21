@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import gitter.privacy.gitlegit.MainActivity;
 import gitter.privacy.gitlegit.R;
 
@@ -118,7 +119,8 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     break;
 
                 case 9:
-                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_4_5), "John");
+
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_4_5), " ");
                     textview1.setText(R.string.john_scenario3_4_question);
                     myButton1.setText(R.string.john_scenario3_4_answer_1);
                     myButton2.setText(R.string.john_scenario3_4_answer_2);
@@ -135,7 +137,7 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     editText5.setVisibility(View.VISIBLE);
                     myRegisterButton.setVisibility(View.VISIBLE);
                     ((MainActivity)getActivity()).setStoryContainerVisible(false);
-                    break;
+
                 case 11:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_4), "Supermarket seller Patrick");
                     break;
@@ -172,7 +174,11 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     myButton2.setVisibility(View.VISIBLE);
                     textview1.setVisibility(View.VISIBLE);
                     ((MainActivity)getActivity()).setStoryContainerVisible(false);
-                case 18:
+                case 109:
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_4_no), "John");
+                    textCounter=textCounter-98;
+                    break;
+
                 default:
                     Log.e(TAG, "playStory: unknown story counter for introduction given, why u do dis");
             }
@@ -180,6 +186,15 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
         }
     };
 
+    @OnClick(R.id.button1)
+    public void onClickYes(){
+        textCounter+=99;
+    }
+
+    @OnClick(R.id.button2)
+    public void onClickNo(){
+
+    }
 
     @Override
     public void onClick(View v) {

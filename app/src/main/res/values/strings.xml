@@ -24,7 +24,7 @@
     <string name="john_scenario2_3">First you need to fill a form on our iPad and we will print the card for you. It will only take 2 minutes of your time.”</string>
     //sss
     <string name="john_scenario2_4">Thank you for filling in the form. You will receive the deal right away by showing your card to the cashier. She will scan your card and after that you will receive the discount. </string>
-    <string name="john_scenario2_4_no">ssssss </string>
+    <string name="john_scenario2_4_no"> Thank you for your time sir. </string>
     <string name="john_scenario2_5"> Well finally I got my groceries, but I’m quite hungry now and don’t want to cook something right away. Maybe some fast food will keep me up.. </string>
 
     <string name="john_scenario3_2"> Too many choices, where should I go? I’m quite short on cash as well, lets take a look at places that give discounts for now </string>
@@ -35,7 +35,7 @@
 
     <string name="john_scenario3_3"> hmm looks good, I’m so hungry right now! </string>
     <string name="john_scenario3_4"> Hi Sir! Did you take a look at our great deals for today? You can get 50% discount on anything you order by making a selfie with your order on Instagram, Facebook or Twitter”. Do you want to take this deal?</string>
-    <string name="john_scenario3_4_5"> </string>
+    <string name="john_scenario3_4_5"> You made your decision..continue</string>
     <string name="john_scenario3_4_question"> Do you want to take this offer?</string>
     <string name="john_scenario3_4_answer_1">Yes</string>
     <string name="john_scenario3_4_answer_2">No</string>
