@@ -13,7 +13,6 @@ import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 import gitter.privacy.gitlegit.MainActivity;
 import gitter.privacy.gitlegit.R;
 
@@ -234,16 +233,11 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
             textCounter++;
         }
     };
-
-    @OnClick(R.id.button1)
-    public void onClickYes(){
-        textCounter+=99;
-    }
-
-    @OnClick(R.id.button2)
-    public void onClickNo(){
-
-    }
+//
+//    @OnClick(R.id.button1)
+//    public void onClickYes(){
+//        textCounter+=99;
+//    }
 
     @Override
     public void onClick(View v) {
