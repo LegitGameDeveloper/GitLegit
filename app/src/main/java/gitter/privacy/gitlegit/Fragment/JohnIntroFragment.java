@@ -196,6 +196,7 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     break;
                 case 20:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_6), "");
+                    textCounter = 29;
                     break;
                 case 21:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_7), "");
@@ -223,6 +224,9 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     break;
                 case 29:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_14), "");
+                    break;
+                case 30:
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_15), "");
                     break;
                 default:
                     Log.e(TAG, "playStory: unknown story counter for introduction given, why u do dis");
