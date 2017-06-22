@@ -45,12 +45,10 @@
 
         </LinearLayout>
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -59,7 +57,6 @@
             android:layout_marginLeft="10dp"
             android:text="JobFinder"
             android:textColor="@color/linkedInBlue"/>
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -68,9 +65,7 @@
             android:layout_marginLeft="10dp"
             android:text="find yours now!"
             android:textStyle="bold"/>
-
     </LinearLayout>
-
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
