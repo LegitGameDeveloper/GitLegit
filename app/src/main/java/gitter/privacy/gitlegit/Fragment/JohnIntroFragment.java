@@ -187,11 +187,43 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     System.out.println(sharedPrefChoices.getString("stap2", null));
                     System.out.println(sharedPrefChoices.getString("stap3", null));
                     System.out.println(sharedPrefChoices.getString("stap4", null));
-                case 109:
-                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_4_no), "John");
-                    textCounter=textCounter-98;
                     break;
-
+                case 18:
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_5), "John");
+                    break;
+                case 19:
+                    // here moet de selfie komen
+                    break;
+                case 20:
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_6), "");
+                    break;
+                case 21:
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_7), "");
+                    break;
+                case 22:
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_8), "");
+                    break;
+                case 23:
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_9), "");
+                    break;
+                case 24:
+                    // hier moet nog de popup komen
+                    break;
+                case 25:
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_10), "");
+                    break;
+                case 26:
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_11), "");
+                    break;
+                case 27:
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_12), "");
+                    break;
+                case 28:
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_13), "");
+                    break;
+                case 29:
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_14), "");
+                    break;
                 default:
                     Log.e(TAG, "playStory: unknown story counter for introduction given, why u do dis");
             }
@@ -236,10 +268,12 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     edit.putString("stap1", "badsupermarket");
                 } else if (stap == 2) {
                     edit.putString("stap2", "no");
+                    textCounter = 12;
                 } else if (stap == 3) {
                     edit.putString("stap3", "BurgerKing");
                 } else if (stap == 4) {
                     edit.putString("stap4", "no");
+                    textCounter = 21;
                 }
                 edit.commit();
                 myButton1.setVisibility(View.INVISIBLE);
