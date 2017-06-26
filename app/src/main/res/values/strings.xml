@@ -27,5 +27,13 @@
     <string name="legit_job_title">Looking For: Assistent</string>
     <string name="legit_job_description">Info: \n\'FreshUp\' is an up and coming real estate agency, looking for an assistent to help us out\n\nWage:1500</string>
 
+    <string name="fake_job_1_title">Looking for a Junior ProjectManager</string>
+    <string name="fake_job_1_description">Experience in managing, apply now and join \'ProjectOr\' \n Wage: 5600 monthly</string>
+    <string name="fake_job_2_title">In need of a welder</string>
+    <string name="fake_job_2_description">Looking for a welder (experience optional) great benefits, apply for a position!\nWage: 2200 monthly</string>
+    <string name="fake_job_3_title">Hiring HR interns</string>
+    <string name="fake_job_3_description">Looking for students with an HR education, minimum of 6 months internships \n Wage: 1000 monthly</string>
+    <string name="fake_job_4_title">Mechanic wanted</string>
+    <string name="fake_job_4_description">Vehicle customization garage: \'FauxOriginal\', searching for new mechanic \n Wage: 3200 monthly</string>
 
 </resources>

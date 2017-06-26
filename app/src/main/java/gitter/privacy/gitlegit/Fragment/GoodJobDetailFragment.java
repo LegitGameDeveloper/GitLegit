@@ -3,12 +3,10 @@ package gitter.privacy.gitlegit.Fragment;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -63,7 +61,7 @@ public class GoodJobDetailFragment extends BaseFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        parentView = bindXMLToFragment(R.layout.job_detail_view, inflater, container);
+        parentView = bindXMLToFragment(R.layout.good_job_detail_view, inflater, container);
         ButterKnife.bind(this, parentView);
         ((MainActivity)getActivity()).setmStoryContainerListener(null);
 
@@ -118,6 +116,7 @@ public class GoodJobDetailFragment extends BaseFragment {
     @OnClick(R.id.applyBtn)
     public void doApply(){
         if(currentJob == chosenJob.LAWYER || currentJob == chosenJob.CLEANER){
+
             jobInfoView.setVisibility(View.GONE);
             sendMailView.setVisibility(View.VISIBLE);
             frameView.getBackground().setAlpha(255);
@@ -127,10 +126,17 @@ public class GoodJobDetailFragment extends BaseFragment {
             }else if(currentJob == chosenJob.CLEANER){
                 senderView.setText(senderPrefix+"optionalcleaning@info.com");
             }
+
         }else if(currentJob == chosenJob.LEGIT){
             mJobDescription.setText("Great we have informed the company that you are interested, they will contact you soon!");
+            doPopupTransition(true);
+        }
+    }
 
-            delayHandler = new Handler();
+    private void doPopupTransition(boolean delayFirst){
+        delayHandler = new Handler();
+
+        if(delayFirst){
             delayHandler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
@@ -138,65 +144,59 @@ public class GoodJobDetailFragment extends BaseFragment {
                     ((MainActivity)getActivity()).setStoryText("Alright, now I just need to wait until the company calls me!", "John");
                 }
             },1500);
-
-            delayHandler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    ((MainActivity)getActivity()).setStoryContainerVisible(false);
-                    sketchyView.setVisibility(View.VISIBLE);
-                }
-            },3000);
-
-            delayHandler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    ((MainActivity)getActivity()).bringStoryToFront();
-                    ((MainActivity)getActivity()).setStoryContainerVisible(true);
-                    ((MainActivity)getActivity()).setStoryText("Ooh, this seems like a great job offer", "John");
-                }
-            },4000);
-
-            delayHandler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    ((MainActivity)getActivity()).setStoryContainerVisible(false);
-                    showingSketchy = true;
-                }
-            },5500);
+        }else{
+            ((MainActivity)getActivity()).setStoryContainerVisible(true);
+            ((MainActivity)getActivity()).setStoryText("Alright, now I just need to wait until the company calls me!", "John");
         }
+
+        delayHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                ((MainActivity)getActivity()).setStoryContainerVisible(false);
+                sketchyView.setVisibility(View.VISIBLE);
+            }
+        },3000);
+
+        delayHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                ((MainActivity)getActivity()).bringStoryToFront();
+                ((MainActivity)getActivity()).setStoryContainerVisible(true);
+                ((MainActivity)getActivity()).setStoryText("Ooh, this seems like a great job offer", "John");
+            }
+        },4000);
+
+        delayHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                ((MainActivity)getActivity()).setStoryContainerVisible(false);
+                showingSketchy = true;
+            }
+        },5500);
     }
 
     @OnClick(R.id.sketchy_send_btn)
     public void sendSketchyConfirm(){
         if(enteredNumberSketchy){
-            Toast.makeText(getActivity(), "alright, done, let's go", Toast.LENGTH_SHORT).show();
-            //todo: go to screen where john says 'ok, now I can go home'
             switchToEnding();
         }else{
             enteredNumberSketchy = true;
-            delayHandler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    ((MainActivity)getActivity()).setStoryContainerVisible(true);
-                    ((MainActivity)getActivity()).setStoryText("Okay, let me enter my number", "John");
-                    sketchyTel.setText("tel: 031-5703423");
-                }
-            },1000);
+            ((MainActivity)getActivity()).setStoryContainerVisible(true);
+            ((MainActivity)getActivity()).setStoryText("Okay, let me enter my number", "John");
+            sketchyTel.setText("tel: 031-5703423");
             delayHandler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
                     ((MainActivity)getActivity()).setStoryContainerVisible(false);
                 }
-            },1750);
+            },1000);
 
         }
     }
 
     @OnClick(R.id.sketch_cancel_btn)
     public void cancelSketch(){
-        //todo: go to screen where john says 'ok now i can go home'
         switchToEnding();
-        //sketchyView.setVisibility(View.GONE);
 
     }
 
@@ -213,7 +213,8 @@ public class GoodJobDetailFragment extends BaseFragment {
 
     @OnClick(R.id.sendMailBtn)
     public void sendMail(){
-        sketchyView.setVisibility(View.VISIBLE);
+        sendMailView.setVisibility(View.GONE);
+        doPopupTransition(false);
     }
 
     @OnClick(R.id.cancelMailBtn)
