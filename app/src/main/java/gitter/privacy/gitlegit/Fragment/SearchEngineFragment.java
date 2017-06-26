@@ -66,6 +66,12 @@ public class SearchEngineFragment extends BaseFragment {
         }
     }
 
+    @OnClick(R.id.try_again_btn)
+    public void doOtherSearch(){
+        mNoResultView.setVisibility(View.GONE);
+        mSearchPageView.setVisibility(View.VISIBLE);
+    }
+
     @OnClick(R.id.bad_website)
     public void goToBadWebsite(){
         ((MainActivity)getActivity()).switchToDifferentScreen(new BadWebsiteFragment(), "BadWebsiteFragment", false);

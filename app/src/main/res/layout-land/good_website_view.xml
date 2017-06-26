@@ -63,12 +63,6 @@
         android:textStyle=""
         android:textColor="@color/linkedInBlue"/>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="@color/linkedInBlue"
-        android:layout_marginTop="3dp"/>
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -90,61 +84,66 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:text="looking for a cleaner" />
+                    android:text="@string/cleaner_job_title"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Info: \n'Optional Clean' is an established cleaning company, looking for new employees to help out!\n\nWage:2300" />
+                    android:text="@string/cleaner_job_description" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/lawyer_job"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_margin="5dp"
-                android:padding="3dp"
-                android:background="@color/transparent_grey">
+                android:background="@color/transparent_grey"
+                android:orientation="vertical"
+                android:padding="3dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Lawyer intern wanted!"
-                    android:textStyle="bold"/>
+                    android:text="@string/lawyer_job_title"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Info: \n'BetterCallSomeLawyers' has been active in the political field for decades, will you join them?\n\nWage: 4500 monthly"
-                    android:textAlignment="viewStart"/>
+                    android:text="@string/lawyer_job_description"
+                    android:textAlignment="viewStart" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/real_job"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_margin="5dp"
-                android:padding="3dp"
-                android:background="@color/transparent_grey">
+                android:background="@color/transparent_grey"
+                android:orientation="vertical"
+                android:padding="3dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Looking For: Assistent"
-                    android:textStyle="bold"/>
+                    android:text="@string/legit_job_title"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Info: \n'FreshUp' is an up and coming real estate agency, looking for an assistent to help us out\n\nWage:1500"
-                    android:textAlignment="viewStart"/>
+                    android:text="@string/legit_job_description"
+                    android:textAlignment="viewStart" />
             </LinearLayout>
-
         </LinearLayout>
 
     </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/linkedInBlue"
+        android:layout_marginTop="3dp"/>
 
 </LinearLayout>
