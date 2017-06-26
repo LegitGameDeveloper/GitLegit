@@ -15,8 +15,8 @@
         <!-- IMAGE CONTAINER -->
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1.5"
+            android:layout_height="243dp"
+            android:layout_weight="1.50"
             android:orientation="horizontal"
             android:padding="10dp">
 
