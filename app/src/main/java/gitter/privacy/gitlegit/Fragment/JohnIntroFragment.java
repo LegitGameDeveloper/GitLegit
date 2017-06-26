@@ -2,17 +2,25 @@ package gitter.privacy.gitlegit.Fragment;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import gitter.privacy.gitlegit.MainActivity;
 import gitter.privacy.gitlegit.R;
 
@@ -39,13 +47,26 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
 
     @BindView(R.id.QuestionToAsk)
     TextView textview1;
+    @BindView(R.id.regularView)
+    ViewGroup regularView;
+    @BindView(R.id.websitePopup)
+    ViewGroup websitePopup;
+    @BindView(R.id.terms_conditions_overview)
+    ViewGroup termsAndConditionsContainer;
+    @BindView(R.id.terms_conditions_scroll)
+    ScrollView termsAndConditionsScroll;
+    @BindView(R.id.terms_conditions_text)
+    TextView termsNConditionsText;
 
-    EditText editText1, editText2, editText3, editText4, editText5;
+    EditText mSuperMarktName_et, mSuperMarktBirthday_et, mSuperMarktResident_et, mSuperMarktCellPhone_et, mSuperMarktEmail;
 
     SharedPreferences sharedPref;
     SharedPreferences sharedPrefChoices;
 
     int stap;
+
+    private Handler handler;
+    private boolean didSignup = false;
 
 
     @Nullable
@@ -60,19 +81,27 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
         myButton2 = (Button) parentView.findViewById(button2);
         myButton2.setOnClickListener(this);
 
-        editText1 = (EditText) parentView.findViewById(supermarket_name);
-        editText2 = (EditText) parentView.findViewById(supermarket_birthday);
-        editText3 = (EditText) parentView.findViewById(supermarket_resident);
-        editText4 = (EditText) parentView.findViewById(supermarket_cellphomeNR);
-        editText5 = (EditText) parentView.findViewById(supermarket_email);
+        mSuperMarktName_et = (EditText) parentView.findViewById(supermarket_name);
+        mSuperMarktBirthday_et = (EditText) parentView.findViewById(supermarket_birthday);
+        mSuperMarktResident_et = (EditText) parentView.findViewById(supermarket_resident);
+        mSuperMarktCellPhone_et = (EditText) parentView.findViewById(supermarket_cellphomeNR);
+        mSuperMarktEmail = (EditText) parentView.findViewById(supermarket_email);
         myRegisterButton = (Button) parentView.findViewById(supermarket_signup);
         myRegisterButton.setOnClickListener(this);
 
         sharedPref = getActivity().getSharedPreferences("MyPref", 0);
         sharedPrefChoices = getActivity().getSharedPreferences("MyPref", 0);
+        handler = new Handler();
 
         return parentView;
     }
+
+    private ClickableSpan clickableSpan = new ClickableSpan() {
+        @Override
+        public void onClick(View textView) {
+            Toast.makeText(getContext(),"Good choice!", Toast.LENGTH_SHORT).show();
+        }
+    };
 
     public void setTextContainerListener(){
         ((MainActivity)getActivity()).setmStoryContainerListener(storyListener);
@@ -134,14 +163,14 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     ((MainActivity)getActivity()).setStoryContainerVisible(false);
                     break;
                 case 10:
-                    editText1.setVisibility(View.VISIBLE);
-                    editText2.setVisibility(View.VISIBLE);
-                    editText3.setVisibility(View.VISIBLE);
-                    editText4.setVisibility(View.VISIBLE);
-                    editText5.setVisibility(View.VISIBLE);
+                    mSuperMarktName_et.setVisibility(View.VISIBLE);
+                    mSuperMarktBirthday_et.setVisibility(View.VISIBLE);
+                    mSuperMarktResident_et.setVisibility(View.VISIBLE);
+                    mSuperMarktCellPhone_et.setVisibility(View.VISIBLE);
+                    mSuperMarktEmail.setVisibility(View.VISIBLE);
                     myRegisterButton.setVisibility(View.VISIBLE);
                     ((MainActivity)getActivity()).setStoryContainerVisible(false);
-
+                    break;
                 case 11:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_4), "Supermarket seller Patrick");
                     break;
@@ -208,16 +237,19 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     break;
                 case 24:
                     // hier moet nog de popup komen
+                    regularView.setVisibility(View.GONE);
+                    websitePopup.setVisibility(View.VISIBLE);
+                    ((MainActivity)getActivity()).setStoryContainerVisible(false);
                     break;
-                case 25:
-                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_10), "");
-                    break;
-                case 26:
-                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_11), "");
-                    break;
-                case 27:
-                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_12), "");
-                    break;
+//                case 25:
+//                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_10), "");
+//                    break;
+//                case 26:
+//                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_11), "");
+//                    break;
+//                case 27:
+//                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_12), "");
+//                    break;
                 case 28:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_13), "");
                     break;
@@ -233,11 +265,40 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
             textCounter++;
         }
     };
-//
-//    @OnClick(R.id.button1)
-//    public void onClickYes(){
-//        textCounter+=99;
-//    }
+
+    @OnClick(R.id.cook_hamburger)
+    public void cookBurger(){
+        SpannableString ss = new SpannableString(termsNConditionsText.getText().toString());
+        ss.setSpan(clickableSpan, (termsNConditionsText.getText().toString().length()-10), termsNConditionsText.getText().toString().length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        termsNConditionsText.setText(ss);
+        termsNConditionsText.setMovementMethod(LinkMovementMethod.getInstance());
+        termsAndConditionsContainer.setVisibility(View.VISIBLE);
+    }
+
+    @OnClick(R.id.cook_spaghetti)
+    public void cookSpaghetti(){
+        SpannableString ss = new SpannableString(termsNConditionsText.getText().toString());
+        ss.setSpan(clickableSpan, (termsNConditionsText.getText().toString().length()-10), termsNConditionsText.getText().toString().length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        termsNConditionsText.setText(ss);
+        termsNConditionsText.setMovementMethod(LinkMovementMethod.getInstance());
+        termsAndConditionsContainer.setVisibility(View.VISIBLE);
+    }
+
+    @OnClick(R.id.cook_steak)
+    public void cookSteak(){
+        SpannableString ss = new SpannableString(termsNConditionsText.getText().toString());
+        ss.setSpan(clickableSpan, (termsNConditionsText.getText().toString().length()-10), termsNConditionsText.getText().toString().length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        termsNConditionsText.setText(ss);
+        termsNConditionsText.setMovementMethod(LinkMovementMethod.getInstance());
+        termsAndConditionsContainer.setVisibility(View.VISIBLE);
+    }
+
+
+    @OnClick(R.id.accept_terms)
+    public void acceptTerms(){
+        Toast.makeText(getContext(), "getHacked", Toast.LENGTH_SHORT).show();
+        termsAndConditionsContainer.setVisibility(View.GONE);
+    }
 
     @Override
     public void onClick(View v) {
@@ -280,23 +341,31 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                 ((MainActivity)getActivity()).setStoryContainerVisible(true);
                 break;
             case supermarket_signup:
-                SharedPreferences.Editor editor = sharedPref.edit();
-
-                editor.putString("Name", editText1.getText().toString());
-                editor.putString("Birthday", editText2.getText().toString());
-                editor.putString("Resident", editText3.getText().toString());
-                editor.putString("Cellphonenr", editText4.getText().toString());
-                editor.putString("email", editText5.getText().toString());
-                editor.commit();
-
-                editText1.setVisibility(View.INVISIBLE);
-                editText2.setVisibility(View.INVISIBLE);
-                editText3.setVisibility(View.INVISIBLE);
-                editText4.setVisibility(View.INVISIBLE);
-                editText5.setVisibility(View.INVISIBLE);
-                myRegisterButton.setVisibility(View.INVISIBLE);
-                ((MainActivity)getActivity()).setStoryContainerVisible(true);
-                break;
+                if(!didSignup){
+                    ((MainActivity)getActivity()).setStoryContainerVisible(true);
+                    ((MainActivity)getActivity()).setStoryText("Alright I'll fill in my information!", "John");
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            ((MainActivity)getActivity()).setStoryContainerVisible(false);
+                            mSuperMarktName_et.setText("John");
+                            mSuperMarktBirthday_et.setText("27-03-1981");
+                            mSuperMarktCellPhone_et.setText("031-5703423");
+                            mSuperMarktResident_et.setText("WhoseVille 95");
+                            mSuperMarktEmail.setText("john@coolmail.com");
+                        }
+                    },1000);
+                    didSignup = true;
+                }else{
+                    mSuperMarktName_et.setVisibility(View.INVISIBLE);
+                    mSuperMarktBirthday_et.setVisibility(View.INVISIBLE);
+                    mSuperMarktResident_et.setVisibility(View.INVISIBLE);
+                    mSuperMarktCellPhone_et.setVisibility(View.INVISIBLE);
+                    mSuperMarktEmail.setVisibility(View.INVISIBLE);
+                    myRegisterButton.setVisibility(View.INVISIBLE);
+                    ((MainActivity)getActivity()).setStoryContainerVisible(true);
+                    ((MainActivity)getActivity()).setStoryText("Done!", "John");
+                }
             default:
                 break;
         }

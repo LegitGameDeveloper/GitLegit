@@ -1,62 +1,226 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <FrameLayout
+    <LinearLayout
+        android:id="@+id/websitePopup"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_weight="1"
-        android:layout_marginTop="0dp"
-        >
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:rotation="270"
+                    android:src="@android:drawable/arrow_up_float"
+                    android:tint="@color/goals_red" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="back"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:background="@drawable/black_border">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="https://supercook.com/home/"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="Supercook"
+                android:textColor="@color/linkedInBlue"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="get Cookin!"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/linkedInBlue"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Select a dish to cook!"
+                android:paddingLeft="10dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/cook_hamburger"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/food_hambruger_ic"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cook a hamburger"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cook_steak"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/food_steak_ice"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cook a steak"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cook_spaghetti"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/food_pasta_ic"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cook some pasta"/>
+
+            </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/regularView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <EditText
-            android:layout_width="95dp"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             android:id="@+id/supermarket_name"
             android:inputType="textPersonName"
-            android:text="Name"
+            android:hint="Name"
             android:visibility="invisible"
             />
 
         <EditText
             android:id="@+id/supermarket_birthday"
-            android:layout_width="95dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             android:inputType="textPersonName"
-            android:text="Birthday"
+            android:hint="Birthday"
             android:visibility="invisible"
             />
 
         <EditText
             android:id="@+id/supermarket_resident"
-            android:layout_width="95dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Resident"
+            android:hint="Resident"
             android:visibility="invisible"
             />
 
         <EditText
             android:id="@+id/supermarket_cellphomeNR"
-            android:layout_width="95dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="120dp"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Cellphone"
+            android:hint="Cellphone"
             android:visibility="invisible"
             />
 
         <EditText
             android:id="@+id/supermarket_email"
-            android:layout_width="95dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="160dp"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             android:ems="10"
             android:inputType="textEmailAddress"
             android:text="Email"
@@ -66,20 +230,17 @@
         <Button
             android:id="@+id/supermarket_signup"
             style="@style/ApplyButton"
-            android:layout_width="95dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="200dp"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             android:text="Sign up!"
             android:visibility="invisible" />
-    </FrameLayout>
-
+    </LinearLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_weight="1"
-        android:layout_marginTop="-250dp"
-        >
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
 
         <TextView
             android:id="@+id/QuestionToAsk"
@@ -110,8 +271,51 @@
             android:layout_marginRight="200dp"
             android:layout_marginTop="130dp"
             android:text="Aldi"
-            android:visibility="invisible"
-            />
+            android:visibility="invisible" />
 
     </FrameLayout>
-</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/terms_conditions_overview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/black_border_white_background"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="accept terms and conditions to continue"
+            android:textStyle="bold"
+            android:padding="5dp"/>
+
+        <ScrollView
+            android:id="@+id/terms_conditions_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/black_border">
+            <TextView
+                android:id="@+id/terms_conditions_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/supercook_terms_conditions"
+                android:padding="5dp"/>
+        </ScrollView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/accept_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="accept"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>
