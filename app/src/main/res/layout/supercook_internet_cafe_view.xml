@@ -11,7 +11,7 @@
         android:layout_height="0dp"
         android:layout_weight="2"
         android:orientation="horizontal"
-        android:background="@drawable/backgroundimage">
+        android:background="@drawable/internetcafe">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -19,7 +19,6 @@
             android:layout_weight="1.5"
             android:orientation="horizontal"
             android:padding="10dp">
-
             <ImageView
                 android:id="@+id/imageView2"
                 android:layout_width="wrap_content"
@@ -40,7 +39,7 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="match_parent"
             android:textSize="20sp"
             android:padding="10dp"
             android:text=""/>

@@ -1,6 +1,7 @@
 package gitter.privacy.gitlegit;
 
 import android.content.Context;
+import android.media.Image;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -26,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
     TextView mStoryText;
     @BindView(R.id.storyTeller)
     TextView mStoryTeller;
+    @BindView(R.id.imageViewMainPort)
+    ImageView importantImageView;
 
     private boolean wrongWebsiteChosen = false;
     private boolean wrongApplicationSent = false;

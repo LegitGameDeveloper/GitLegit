@@ -20,7 +20,7 @@
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="200dp"
-                android:layout_height="112dp"
+                android:layout_height="match_parent"
                 android:layout_marginRight="300dp"
                 android:background="@drawable/chara"
                 android:layout_weight="0.06"
