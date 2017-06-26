@@ -249,15 +249,53 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_12), "");
                     break;
                 case 28:
-                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_13), "");
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_13), "John Doe");
                     break;
                 case 29:
-                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_14), "");
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_14), "John Doe");
                     break;
                 case 30:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_15), "");
                     break;
+                case 31:
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_aldi_no_1), "Cashier");
+                    break;
+                case 32:
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_aldi_no_2), "John Doe");
+                    break;
+                case 33:
+                    stap = 5;
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_4_5), " ");
+                    textview1.setText(R.string.john_scenario2_aldi_no_question);
+                    myButton1.setText(R.string.john_scenario2_aldi_mac);
+                    myButton2.setText(R.string.john_scenario2_aldi_burgerking);
+                    myButton1.setVisibility(View.VISIBLE);
+                    myButton2.setVisibility(View.VISIBLE);
+                    textview1.setVisibility(View.VISIBLE);
+                    ((MainActivity)getActivity()).setStoryContainerVisible(false);
+                    break;
+                case 34:
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_aldi_fastfood), "Waiter Linda");
+                    break;
+                case 35:
+                    stap = 6;
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_4_5), " ");
+                    textview1.setText(R.string.john_scenario2_question);
+                    myButton1.setText(R.string.john_scenario2_answer_1);
+                    myButton2.setText(R.string.john_scenario2_answer_2);
+                    myButton1.setVisibility(View.VISIBLE);
+                    myButton2.setVisibility(View.VISIBLE);
+                    textview1.setVisibility(View.VISIBLE);
+                    ((MainActivity)getActivity()).setStoryContainerVisible(false);
+                    break;
+                case 36:
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_offer_yes), " ");
+                    break;
+                case 37:
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_offer_yes_2), " ");
+                    break;
                 default:
+
                     Log.e(TAG, "playStory: unknown story counter for introduction given, why u do dis");
             }
             textCounter++;
@@ -305,21 +343,26 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
         termsAndConditionsScroll.setVisibility(View.GONE);
         websitePopup.setVisibility(View.GONE);
     }
-
+    String choice="test";
     @Override
     public void onClick(View v) {
         SharedPreferences.Editor edit = sharedPrefChoices.edit();
-
+//        String choice="test";
         switch (v.getId()) {
             case button1: // keuze 1
                 if (stap == 1) {
                     edit.putString("stap1", "aldi");
+                    choice = sharedPrefChoices.getString("stap1", null);
                 } else if (stap == 2) {
                     edit.putString("stap2", "yes");
                 } else if (stap == 3) {
                     edit.putString("stap3", "McDonalds");
                 } else if (stap == 4) {
                     edit.putString("stap4", "yes");
+                } else if (stap == 5) {
+                    edit.putString("stap5", "McDonalds");
+                }else if (stap==6){
+                    edit.putString("stap6","yes");
                 }
 
                 edit.commit();
@@ -333,12 +376,23 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     edit.putString("stap1", "badsupermarket");
                 } else if (stap == 2) {
                     edit.putString("stap2", "no");
-                    textCounter = 12;
+                    ((MainActivity)getActivity()).setStoryContainerVisible(true);
+                    if (choice.trim().equalsIgnoreCase("aldi")){
+                        textCounter= 31;
+                    }else {
+                        textCounter = 12;
+                    }
                 } else if (stap == 3) {
                     edit.putString("stap3", "BurgerKing");
                 } else if (stap == 4) {
                     edit.putString("stap4", "no");
                     textCounter = 21;
+                }else if (stap== 5){
+                    edit.putString("stap5", "BurgerKing");
+                }else if (stap==6){
+                    edit.putString("stap6", "no");
+                    //TODO textcounter to scenario with text i have to make dinner tonight tho...supercook scenario
+                    //TODO 2 change text from oh no, no money supercook.... to i have to make dinner for tonight...
                 }
                 edit.commit();
                 myButton1.setVisibility(View.INVISIBLE);

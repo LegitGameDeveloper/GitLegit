@@ -22,27 +22,42 @@
     <string name="john_scenario2_2">Good day Sir, welcome we have a great deal for today. All you need to do is to fill in this form and you will receive a card where you will get daily discount from our store. Great right?..
 </string>
     <string name="john_scenario2_3">First you need to fill a form on our iPad and we will print the card for you. It will only take 2 minutes of your time.”</string>
-    //sss
     <string name="john_scenario2_4">Thank you for filling in the form. You will receive the deal right away by showing your card to the cashier. She will scan your card and after that you will receive the discount. </string>
     <string name="john_scenario2_4_no"> Thank you for your time sir. </string>
+
+
+    <!-- different scenario for aldi no that leads to fast food-->
+    <string name="john_scenario2_aldi_no_1">Good day sir, we give away coupons for a free meal in fast food restaurants.</string>
+    <string name="john_scenario2_aldi_no_2">Okay great, thank you.</string>
+    <string name="john_scenario2_aldi_no_question">Where would you like to use this coupon?</string>
+    <string name="john_scenario2_aldi_mac"> McDonald’s</string>
+    <string name="john_scenario2_aldi_burgerking"> Burger King</string>
+    <string name="john_scenario2_aldi_fastfood">Good day sir, I see you have a coupon. If you share a selfie with your meal your drink will be free aswell.</string>
+    <string name="john_scenario2_question"> Do you want to take this offer?</string>
+    <string name="john_scenario2_answer_1">Yes</string>
+    <string name="john_scenario2_answer_2">No</string>
+    <string name="john_scenario2_offer_yes"> You take a selfie, post it on social media, receive the discount and leave.</string>
+    <string name="john_scenario2_offer_yes_2"> Two weeks later . . .[TODO picture selfie on billboard in random country]</string>
+    <!-- end of scenario for aldi no choice-->
+
     <string name="john_scenario2_5"> Well finally I got my groceries, but I’m quite hungry now and don’t want to cook something right away. Maybe some fast food will keep me up.. </string>
 
     <string name="john_scenario3_2"> Too many choices, where should I go? I’m quite short on cash as well, lets take a look at places that give discounts for now </string>
     <string name="john_scenario3_2_5"> </string>
-    <string name="john_scenario3_2_question">Where would you like to eat?</string>
+    <string name="john_scenario3_2_question"> Where would you like to eat?</string>
     <string name="john_scenario3_2_answer_mac"> McDonald’s</string>
     <string name="john_scenario3_2_answer_2"> Burger King</string>
 
-    <string name="john_scenario3_3"> hmm looks good, I’m so hungry right now! </string>
+    <string name="john_scenario3_3"> Hmm looks good, I’m so hungry right now! </string>
     <string name="john_scenario3_4"> Hi Sir! Did you take a look at our great deals for today? You can get 50% discount on anything you order by making a selfie with your order on Instagram, Facebook or Twitter”. Do you want to take this deal?</string>
     <string name="john_scenario3_4_5"> You made your decision..continue</string>
     <string name="john_scenario3_4_question"> Do you want to take this offer?</string>
-    <string name="john_scenario3_4_answer_1">Yes</string>
-    <string name="john_scenario3_4_answer_2">No</string>
+    <string name="john_scenario3_4_answer_1"> Yes</string>
+    <string name="john_scenario3_4_answer_2"> No</string>
 
     <string name="john_scenario3_5"> You take a selfie, post it on social media, receive the discount and leave.</string>
     <string name="john_scenario3_6"> Two weeks later . . .[TODO picture selfie on billboard in random country]</string>
-    <string name="john_scenario3_7"> Well actually I don’t have enough money left to buy something without discount. Lets head back home I have got to cook something for myself now.</string>
+    <string name="john_scenario3_7"> Lets head back home I have yet to prepare dinner.</string>
     <string name="john_scenario3_8"> So lets see what do I have here, meat, rice, paprika. . . argh too many choices. Wait wait lets try this website I’ve recently heard about . . . Supercook.com yeah lets just add my groceries and see what I can cook with it.</string>
     <string name="john_scenario3_9"> Lets add meat, rice and paprikas to the ingredients on the web and lets see what recipes supercook has in store for me.</string>
     <string name="john_scenario3_10">Ah a pop-up from supercook.com</string>
