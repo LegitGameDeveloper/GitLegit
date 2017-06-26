@@ -57,6 +57,8 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
     ScrollView termsAndConditionsScroll;
     @BindView(R.id.terms_conditions_text)
     TextView termsNConditionsText;
+    @BindView(R.id.accept_terms)
+    Button acceptTermButton;
 
     EditText mSuperMarktName_et, mSuperMarktBirthday_et, mSuperMarktResident_et, mSuperMarktCellPhone_et, mSuperMarktEmail;
 
@@ -96,6 +98,7 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
         return parentView;
     }
 
+    // deny terms
     private ClickableSpan clickableSpan = new ClickableSpan() {
         @Override
         public void onClick(View textView) {
@@ -234,22 +237,17 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     break;
                 case 23:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_9), "");
+                    textCounter++;
                     break;
-                case 24:
+                case 25:
                     // hier moet nog de popup komen
                     regularView.setVisibility(View.GONE);
                     websitePopup.setVisibility(View.VISIBLE);
                     ((MainActivity)getActivity()).setStoryContainerVisible(false);
                     break;
-//                case 25:
-//                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_10), "");
-//                    break;
-//                case 26:
-//                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_11), "");
-//                    break;
-//                case 27:
-//                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_12), "");
-//                    break;
+                case 27:
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_12), "");
+                    break;
                 case 28:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_13), "");
                     break;
@@ -296,8 +294,16 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
 
     @OnClick(R.id.accept_terms)
     public void acceptTerms(){
-        Toast.makeText(getContext(), "getHacked", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getContext(), "Done!", Toast.LENGTH_SHORT).show();
         termsAndConditionsContainer.setVisibility(View.GONE);
+
+        ((MainActivity)getActivity()).setStoryText("Done!", "John");
+        textCounter = 27;
+        ((MainActivity)getActivity()).setStoryContainerVisible(true);
+        acceptTermButton.setVisibility(View.GONE);
+        termsNConditionsText.setVisibility(View.GONE);
+        termsAndConditionsScroll.setVisibility(View.GONE);
+        websitePopup.setVisibility(View.GONE);
     }
 
     @Override
