@@ -30,16 +30,38 @@ public class MainActivity extends AppCompatActivity {
     TextView mStoryText;
     @BindView(R.id.storyTeller)
     TextView mStoryTeller;
+<<<<<<< HEAD
     @BindView(R.id.imageView2)
     ImageView mImageview;
+=======
+    @BindView(R.id.imageViewMainPort)
+    ImageView importantImageView;
+
+    private boolean wrongWebsiteChosen = false;
+    private boolean wrongApplicationSent = false;
+>>>>>>> master
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.base_view);
         ButterKnife.bind(this);
+<<<<<<< HEAD
+=======
+
+        //checking to see how to use caching : https://github.com/Pixplicity/EasyPreferences
+
+>>>>>>> master
         Log.d(TAG, "onCreate: going to do some preparing");
         switchToDifferentScreen(new JohnIntroFragment(), JohnIntroFragment.TAG, false);
+    }
+
+    public void setWrongWebsiteChosen(boolean wrongWebsiteChosen){
+        this.wrongWebsiteChosen = wrongWebsiteChosen;
+    }
+
+    public void setWrongApplicationSent(boolean wrongApplicationSent){
+        this.wrongApplicationSent = wrongApplicationSent;
     }
 
     public void setStoryText(String textToDisplayInBubble, String personTalking){

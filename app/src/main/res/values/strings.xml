@@ -9,6 +9,18 @@
         I’m at this point.Looking for a job. My Friends told me that getLinked is a good way to start searching for work.</string>
     <string name="john_introduction_2">Unfortunately, I don’t have any personal computer.
         Let’s go to the Internet Cafe. I need to go to the Internet Café in the neighborhood.</string>
+    <string name="cleaner_job_title">CLEANERS WANTED!!</string>
+    <string name="cleaner_job_description">We are a large company looking for cleaners to clean stuff!\n
+    The pay is very high, you will be nicely compensated, interested? then please apply!</string>
+    <string name="volunteer_job_title">Looking for volunteers, (Minimum wage)</string>
+    <string name="volunteer_job_description">We are a small non-profit organization and we are looking for volunteerd
+    to help us build several houses for the poor. We are in desperate need of help so you will be receiving minimum wage pay
+    If you are interested, please apply below!</string>
+    <string name="fill_form_text_1">Alright, time to fill in my information! I have my ID card right here,
+        I just need to enter it just as it is on my ID</string>
+    <string name="search_engine_text1">Alright, let\'s search for the term: \'apply for job\'</string>
+    <string name="search_engine_wrong_text">That didn\'t seem to be the correct search term</string>
+    <string name="search_engine_no_results">No results found for \'%1$s\'</string>
 
 
 </resources>

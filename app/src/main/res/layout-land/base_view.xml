@@ -9,11 +9,36 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
+<<<<<<< HEAD
         android:layout_height="86dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_centerHorizontal="true">
         <TextView
+=======
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imageViewMainPort"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:background="@drawable/homesweethome"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="163dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imageJohnDoeMainPort"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:background="@drawable/chara"/>
+        </LinearLayout>
+        <!--Story Container -->
+        <LinearLayout
+            android:id="@+id/storyContainer"
+>>>>>>> master
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textSize="20sp"

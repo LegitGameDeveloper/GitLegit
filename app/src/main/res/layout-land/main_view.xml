@@ -12,12 +12,13 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
-        android:orientation="horizontal">
-
+        android:orientation="horizontal"
+        android:background="@drawable/backgroundimage">
         <!-- IMAGE CONTAINER -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+<<<<<<< HEAD
             android:layout_weight="1">
 
 
@@ -26,6 +27,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:srcCompat="@mipmap/john_doe_sitting" />
+=======
+            android:layout_weight="0.48"
+            android:background="@drawable/chara">
+>>>>>>> master
         </LinearLayout>
 
         <LinearLayout
@@ -35,6 +40,7 @@
             android:orientation="horizontal"
             android:padding="10dp">
 
+<<<<<<< HEAD
             <Button
                 android:id="@+id/btn_1"
                 style="@style/ChoiceButton"
@@ -54,6 +60,8 @@
                 android:padding="5dp"
                 android:text="Geef je wachtwoord voor Google" />
 
+=======
+>>>>>>> master
         </LinearLayout>
 
     </LinearLayout>
@@ -72,12 +80,19 @@
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
+<<<<<<< HEAD
             android:layout_height="64dp"
             android:background="#fff"
             android:paddingTop="20dp"
             android:text="Hallo ik ben John Doe."
             android:textSize="20sp" />
 
+=======
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:text=""/>
+>>>>>>> master
     </LinearLayout>
 
 </LinearLayout>
