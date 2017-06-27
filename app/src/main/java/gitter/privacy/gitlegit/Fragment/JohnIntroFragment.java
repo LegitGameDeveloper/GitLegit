@@ -16,7 +16,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -102,7 +101,15 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
     private ClickableSpan clickableSpan = new ClickableSpan() {
         @Override
         public void onClick(View textView) {
-            Toast.makeText(getContext(),"Good choice!", Toast.LENGTH_SHORT).show();
+            termsAndConditionsContainer.setVisibility(View.GONE);
+
+            ((MainActivity)getActivity()).setStoryText("Done!", "John");
+            textCounter = 38;
+            ((MainActivity)getActivity()).setStoryContainerVisible(true);
+            acceptTermButton.setVisibility(View.GONE);
+            termsNConditionsText.setVisibility(View.GONE);
+            termsAndConditionsScroll.setVisibility(View.GONE);
+            websitePopup.setVisibility(View.GONE);
         }
     };
 
@@ -256,6 +263,8 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     break;
                 case 30:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_15), "");
+                    //game over
+                    textCounter= 100;
                     break;
                 case 31:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_aldi_no_1), "Cashier");
@@ -294,8 +303,13 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                 case 37:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_offer_yes_2), " ");
                     break;
+                case 38:
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_skip_popup_1), "John Doe");
+                    break;
+                case 39:
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_skip_popup_2), "John Doe");
+                    break;
                 default:
-
                     Log.e(TAG, "playStory: unknown story counter for introduction given, why u do dis");
             }
             textCounter++;
@@ -347,7 +361,6 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
     @Override
     public void onClick(View v) {
         SharedPreferences.Editor edit = sharedPrefChoices.edit();
-//        String choice="test";
         switch (v.getId()) {
             case button1: // keuze 1
                 if (stap == 1) {
@@ -374,6 +387,7 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
             case button2: // keuze 2
                 if (stap == 1) {
                     edit.putString("stap1", "badsupermarket");
+                    choice = sharedPrefChoices.getString("stap1", null);
                 } else if (stap == 2) {
                     edit.putString("stap2", "no");
                     ((MainActivity)getActivity()).setStoryContainerVisible(true);
@@ -391,8 +405,7 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     edit.putString("stap5", "BurgerKing");
                 }else if (stap==6){
                     edit.putString("stap6", "no");
-                    //TODO textcounter to scenario with text i have to make dinner tonight tho...supercook scenario
-                    //TODO 2 change text from oh no, no money supercook.... to i have to make dinner for tonight...
+                    textCounter=21;
                 }
                 edit.commit();
                 myButton1.setVisibility(View.INVISIBLE);
@@ -417,6 +430,14 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     },1000);
                     didSignup = true;
                 }else{
+                    System.out.println(" I am here now");
+                    System.out.println(sharedPrefChoices.getString("stap1", null));
+                    if (choice.trim().equalsIgnoreCase("badsupermarket")){
+                        textCounter= 30;
+                        System.out.println(" hooorayyyy");
+                    }
+                    System.out.println(" i have ended");
+
                     mSuperMarktName_et.setVisibility(View.INVISIBLE);
                     mSuperMarktBirthday_et.setVisibility(View.INVISIBLE);
                     mSuperMarktResident_et.setVisibility(View.INVISIBLE);
