@@ -20,17 +20,11 @@ public class GoodWebsiteFragment extends BaseFragment {
 
     public static final String TAG = "GoodWebsiteFragment";
 
-    @BindView(R.id.root_view)
-    ViewGroup background;
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         parentView = bindXMLToFragment(R.layout.good_website_view, inflater, container);
         ButterKnife.bind(this, parentView);
-        ((MainActivity)getActivity()).setStoryContainerVisible(false);
-
-        background.getBackground().setAlpha(25);
 
         return parentView;
     }

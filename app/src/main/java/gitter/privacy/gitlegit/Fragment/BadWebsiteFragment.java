@@ -70,4 +70,9 @@ public class BadWebsiteFragment extends BaseFragment {
 
         ((MainActivity)getActivity()).switchToDifferentScreen(fragment, BadJobDetailFragment.class.getSimpleName(), false);
     }
+
+    @OnClick(R.id.back_btn)
+    public void goBackToSearchResults(){
+        ((MainActivity)getActivity()).switchToDifferentScreen(new SearchEngineFragment(), SearchEngineFragment.TAG, false);
+    }
 }

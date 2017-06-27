@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -35,6 +36,11 @@ public class EndingFragment extends BaseFragment {
             @Override
             public void run() {
                 timePassBackground.setVisibility(View.GONE);
+                if(((MainActivity)getActivity()).isWrongApplicationSent() || ((MainActivity)getActivity()).isWrongWebsiteChosen()){
+                    Toast.makeText(getActivity(), "u failed", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(getActivity(), "U MADE IT", Toast.LENGTH_SHORT).show();
+                }
             }
         },1000);
 

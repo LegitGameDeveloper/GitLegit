@@ -2,8 +2,10 @@ package gitter.privacy.gitlegit;
 
 import android.content.Context;
 import android.media.Image;
+import android.support.annotation.DrawableRes;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -30,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
     TextView mStoryTeller;
     @BindView(R.id.imageViewMainPort)
     ImageView importantImageView;
+    @BindView(R.id.imageJohnDoeMainPort)
+    ImageView johnDoeImage;
 
     private boolean wrongWebsiteChosen = false;
     private boolean wrongApplicationSent = false;
@@ -40,10 +44,28 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.base_view);
         ButterKnife.bind(this);
 
-        //checking to see how to use caching : https://github.com/Pixplicity/EasyPreferences
-
         Log.d(TAG, "onCreate: going to do some preparing");
         switchToDifferentScreen(new JohnIntroFragment(), JohnIntroFragment.TAG, false);
+    }
+
+    public void hideMainBackgroundImage(boolean hide){
+        if(hide){
+            importantImageView.setVisibility(View.GONE);
+        }else{
+            importantImageView.setVisibility(View.VISIBLE);
+        }
+    }
+
+    public void setMainBackgroundImage(@DrawableRes int image){
+        importantImageView.setImageDrawable(ContextCompat.getDrawable(this,image));
+    }
+
+    public boolean isWrongWebsiteChosen(){
+        return wrongWebsiteChosen;
+    }
+
+    public boolean isWrongApplicationSent(){
+        return wrongApplicationSent;
     }
 
     public void setWrongWebsiteChosen(boolean wrongWebsiteChosen){

@@ -138,6 +138,7 @@
                         android:textSize="12sp"
                         android:text="name"/>
                     <TextView
+                        android:id="@+id/form_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="3dp"
@@ -148,6 +149,7 @@
                         android:textSize="12sp"
                         android:text="surname"/>
                     <TextView
+                        android:id="@+id/form_surname"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="3dp"
@@ -159,6 +161,7 @@
                         android:textSize="12sp"
                         android:text="adress"/>
                     <TextView
+                        android:id="@+id/form_address"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="3dp"
@@ -169,16 +172,7 @@
                         android:textSize="12sp"
                         android:text="social security number"/>
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="3dp"
-                        android:background="@drawable/black_border"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="12sp"
-                        android:text="name"/>
-                    <TextView
+                        android:id="@+id/form_socialsecuritynr"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="3dp"
@@ -190,6 +184,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
+                        style="@style/ApplyButton"
                         android:text="send application"/>
 
                 </LinearLayout>

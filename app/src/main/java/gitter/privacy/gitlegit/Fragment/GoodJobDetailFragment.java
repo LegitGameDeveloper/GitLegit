@@ -3,9 +3,11 @@ package gitter.privacy.gitlegit.Fragment;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import butterknife.BindView;
@@ -43,6 +45,8 @@ public class GoodJobDetailFragment extends BaseFragment {
     TextView mSketchyTitle;
     @BindView(R.id.sketch_tel)
     TextView sketchyTel;
+    @BindView(R.id.applyBtn)
+    Button applyBtn;
 
     public static final String JOB_CHOSEN = "job_John_chose";
     public static final String CLEANER_JOB = "cleaner";
@@ -130,6 +134,7 @@ public class GoodJobDetailFragment extends BaseFragment {
         }else if(currentJob == chosenJob.LEGIT){
             mJobDescription.setText("Great we have informed the company that you are interested, they will contact you soon!");
             doPopupTransition(true);
+            applyBtn.setVisibility(View.GONE);
         }
     }
 
@@ -140,6 +145,7 @@ public class GoodJobDetailFragment extends BaseFragment {
             delayHandler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
+                    ((MainActivity)getActivity()).bringStoryToFront();
                     ((MainActivity)getActivity()).setStoryContainerVisible(true);
                     ((MainActivity)getActivity()).setStoryText("Alright, now I just need to wait until the company calls me!", "John");
                 }
@@ -164,7 +170,7 @@ public class GoodJobDetailFragment extends BaseFragment {
                 ((MainActivity)getActivity()).setStoryContainerVisible(true);
                 ((MainActivity)getActivity()).setStoryText("Ooh, this seems like a great job offer", "John");
             }
-        },4000);
+        },4500);
 
         delayHandler.postDelayed(new Runnable() {
             @Override
@@ -172,7 +178,7 @@ public class GoodJobDetailFragment extends BaseFragment {
                 ((MainActivity)getActivity()).setStoryContainerVisible(false);
                 showingSketchy = true;
             }
-        },5500);
+        },6000);
     }
 
     @OnClick(R.id.sketchy_send_btn)
@@ -203,6 +209,13 @@ public class GoodJobDetailFragment extends BaseFragment {
     private void switchToEnding(){
         ((MainActivity)getActivity()).setStoryContainerVisible(true);
         ((MainActivity)getActivity()).setStoryText("Alright, I'll head home for now!", "John");
+        if(currentJob != chosenJob.LEGIT){
+            ((MainActivity)getActivity()).setWrongWebsiteChosen(false);
+            ((MainActivity)getActivity()).setWrongApplicationSent(true);
+        }else{
+            ((MainActivity)getActivity()).setWrongWebsiteChosen(false);
+            ((MainActivity)getActivity()).setWrongApplicationSent(false);
+        }
         delayHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -227,6 +240,10 @@ public class GoodJobDetailFragment extends BaseFragment {
     @OnClick(R.id.back_btn)
     public void goBackToGoodWebsiteJobOverview(){
         if(showingSketchy){
+            if(mSketchyTitle.getTextSize() == 180){
+                Log.i(TAG, "goBackToGoodWebsiteJobOverview: enuff is enuff");
+                return;
+            }
             mSketchyTitle.setTextSize(COMPLEX_UNIT_SP, Values.pixelsToSp(getActivity(),mSketchyTitle.getTextSize())+2);
         }else{
             ((MainActivity)getActivity()).switchToDifferentScreen(new GoodWebsiteFragment(), GoodWebsiteFragment.TAG, false);

@@ -41,7 +41,7 @@ public class SearchEngineFragment extends BaseFragment {
         
         ((MainActivity)getActivity()).setStoryContainerVisible(true);
         ((MainActivity)getActivity()).setStoryText(getString(R.string.search_engine_text1),"John");
-
+        ((MainActivity)getActivity()).hideMainBackgroundImage(true);
         ((MainActivity)getActivity()).setmStoryContainerListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
