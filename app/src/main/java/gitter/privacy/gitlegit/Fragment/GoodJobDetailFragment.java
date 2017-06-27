@@ -185,6 +185,7 @@ public class GoodJobDetailFragment extends BaseFragment {
     public void sendSketchyConfirm(){
         if(enteredNumberSketchy){
             switchToEnding();
+            ((MainActivity)getActivity()).setPopupAccepted(true);
         }else{
             enteredNumberSketchy = true;
             ((MainActivity)getActivity()).setStoryContainerVisible(true);

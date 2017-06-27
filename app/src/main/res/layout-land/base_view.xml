@@ -15,7 +15,8 @@
             android:id="@+id/imageViewMainPort"
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:background="@drawable/homesweethome" />
+            android:src="@drawable/homesweethome"
+            android:scaleType="fitXY"/>
 
         <!--Story Container -->
         <LinearLayout
@@ -30,7 +31,8 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="right"
-                android:background="@drawable/chara" />
+                android:src="@drawable/chara"
+                android:scaleType="fitXY"/>
 
             <LinearLayout
                 android:layout_width="match_parent"

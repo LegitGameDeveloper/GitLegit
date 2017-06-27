@@ -1,7 +1,6 @@
 package gitter.privacy.gitlegit;
 
 import android.content.Context;
-import android.media.Image;
 import android.support.annotation.DrawableRes;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -10,7 +9,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -18,8 +16,8 @@ import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
-import gitter.privacy.gitlegit.Fragment.JohnIntroFragment;
+import gitter.privacy.gitlegit.Fragment.JobHuntIntroFragment;
+import gitter.privacy.gitlegit.Fragment.MenuFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean wrongWebsiteChosen = false;
     private boolean wrongApplicationSent = false;
+    private boolean popupAccepted = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         Log.d(TAG, "onCreate: going to do some preparing");
-        switchToDifferentScreen(new JohnIntroFragment(), JohnIntroFragment.TAG, false);
+        switchToDifferentScreen(new MenuFragment(), "MenuFragment", false);
     }
 
     public void hideMainBackgroundImage(boolean hide){
@@ -57,7 +56,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setMainBackgroundImage(@DrawableRes int image){
+        if(image == 0){
+            importantImageView.setVisibility(View.GONE);
+            return;
+        }
+        importantImageView.setVisibility(View.VISIBLE);
         importantImageView.setImageDrawable(ContextCompat.getDrawable(this,image));
+    }
+
+    public void setCharacterImage(@DrawableRes int image){
+        if(image == 0){
+            johnDoeImage.setVisibility(View.GONE);
+            return;
+        }
+        johnDoeImage.setVisibility(View.VISIBLE);
+        johnDoeImage.setImageDrawable(ContextCompat.getDrawable(this,image));
     }
 
     public boolean isWrongWebsiteChosen(){
@@ -68,12 +81,20 @@ public class MainActivity extends AppCompatActivity {
         return wrongApplicationSent;
     }
 
+    public boolean isPopupAccepted(){
+        return popupAccepted;
+    }
+
     public void setWrongWebsiteChosen(boolean wrongWebsiteChosen){
         this.wrongWebsiteChosen = wrongWebsiteChosen;
     }
 
     public void setWrongApplicationSent(boolean wrongApplicationSent){
         this.wrongApplicationSent = wrongApplicationSent;
+    }
+
+    public void setPopupAccepted(boolean popupAccepted){
+        this.popupAccepted = popupAccepted;
     }
 
     public void bringStoryToFront(){

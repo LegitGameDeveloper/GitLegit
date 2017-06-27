@@ -14,9 +14,9 @@ import gitter.privacy.gitlegit.R;
  * Created by jahmale_c on 15/06/2017.
  */
 
-public class JohnIntroFragment extends BaseFragment {
+public class JobHuntIntroFragment extends BaseFragment {
 
-    public static final String TAG = "JohnIntroFragment";
+    public static final String TAG = "JobHuntIntroFragment";
     private boolean containerIsVisible = false;
     private int textCounter = 0;
 
