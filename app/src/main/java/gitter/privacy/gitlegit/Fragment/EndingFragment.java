@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import butterknife.BindView;
@@ -27,6 +28,8 @@ public class EndingFragment extends BaseFragment {
     ViewGroup timePassBackground;
     @BindView(R.id.restart_btn)
     ViewGroup restartBtn;
+    @BindView(R.id.restart_text)
+    TextView restartText;
 
     boolean isGoodEnding = true;
 
@@ -48,7 +51,7 @@ public class EndingFragment extends BaseFragment {
                     isGoodEnding = false;
                     playBadEnding();
                 }else{
-                    //todo: do the good ending
+                    playGoodEnding();
                     Toast.makeText(getActivity(), "U MADE IT", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -57,8 +60,15 @@ public class EndingFragment extends BaseFragment {
         return parentView;
     }
 
-    private void showRestartBtn(){
-
+    private void playGoodEnding(){
+        ((MainActivity)getActivity()).setMainBackgroundImage(R.drawable.good_ending);
+        ((MainActivity)getActivity()).hideMainBackgroundImage(false);
+        ((MainActivity)getActivity()).setCharacterImage(R.drawable.chara);
+        ((MainActivity)getActivity()).setCharacterImage(0);
+        ((MainActivity)getActivity()).setStoryContainerVisible(true);
+        ((MainActivity)getActivity()).setStoryText("John finally has a job and is on his way to a good future with his privacy intact!", "");
+        restartText.setText("Play again!");
+        restartBtn.setVisibility(View.VISIBLE);
     }
 
     private void playBadEnding(){
@@ -128,6 +138,10 @@ public class EndingFragment extends BaseFragment {
 
     @OnClick(R.id.restart_btn)
     public void goBackToMenu(){
-
+        ((MainActivity)getActivity()).setWrongApplicationSent(false);
+        ((MainActivity)getActivity()).setWrongWebsiteChosen(false);
+        ((MainActivity)getActivity()).setPopupAccepted(false);
+        ((MainActivity)getActivity()).setCharacterImage(R.drawable.chara);
+        ((MainActivity)getActivity()).switchToDifferentScreen(new MenuFragment(), "MenuFragment", false);
     }
 }

@@ -1,6 +1,7 @@
 package gitter.privacy.gitlegit;
 
 import android.content.Context;
+import android.os.Handler;
 import android.support.annotation.DrawableRes;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -8,15 +9,20 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import gitter.privacy.gitlegit.Fragment.CreditsFragment;
 import gitter.privacy.gitlegit.Fragment.MenuFragment;
+import gitter.privacy.gitlegit.Fragment.TipsAndTricksFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,15 +41,51 @@ public class MainActivity extends AppCompatActivity {
     private boolean wrongWebsiteChosen = false;
     private boolean wrongApplicationSent = false;
     private boolean popupAccepted = false;
+    private boolean backPressed = false;
+    private Handler handler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.base_view);
         ButterKnife.bind(this);
+        handler = new Handler();
 
         Log.d(TAG, "onCreate: going to do some preparing");
         switchToDifferentScreen(new MenuFragment(), "MenuFragment", false);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.back_to_main_item) {
+            switchToDifferentScreen(new MenuFragment(), "MenuFragment", false);
+            return true;
+        }
+
+        if(id == R.id.credits_item){
+            switchToDifferentScreen(new CreditsFragment(), "CreditsFragment", false);
+            return true;
+        }
+
+        if(id == R.id.tips_tricks_item){
+            switchToDifferentScreen(new TipsAndTricksFragment(), "TipsNTricks", false);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     public void hideMainBackgroundImage(boolean hide){
@@ -164,6 +206,22 @@ public class MainActivity extends AppCompatActivity {
             fragmentManager.beginTransaction()
                     .replace(R.id.fragmentContainer, fragment)
                     .commit();
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(!backPressed){
+            Toast.makeText(getApplicationContext(), "Press again to end app",Toast.LENGTH_SHORT).show();
+            backPressed = true;
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    backPressed = false;
+                }
+            },1000);
+        }else{
+            super.onBackPressed();
         }
     }
 }

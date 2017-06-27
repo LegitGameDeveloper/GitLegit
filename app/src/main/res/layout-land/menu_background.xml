@@ -1,32 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/menu_background"
+    android:paddingTop="80dp"
     android:layout_height="match_parent">
-
-    <TextView
-        android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="PRIVACY IS KEY!"
-        android:textColor="@color/secure_green"
-        android:textStyle="bold"
-        android:textSize="30sp"
-        android:layout_gravity="center"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textColor="@color/goals_red"
-        android:text="help John Doe through his small adventures"
-        android:layout_gravity="center"/>
 
     <Button
         android:id="@+id/jobHuntStory"
         android:layout_marginTop="30sp"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_centerInParent="true"
         android:padding="10dp"
         android:text="JobHunt"
         style="@style/MenuButton"/>
@@ -36,9 +20,10 @@
         android:layout_marginTop="10dp"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/jobHuntStory"
         android:padding="10dp"
         android:text="foodHunt"
         style="@style/MenuButton"/>
 
-</LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+    android:id="@+id/back_to_main_item"
+    android:orderInCategory="100"
+    android:title="back to main menu"
+    app:showAsAction="never" />
+
+    <item
+    android:id="@+id/tips_tricks_item"
+    android:orderInCategory="100"
+    android:title="privacy tips and tricks"
+    app:showAsAction="never" />
+
+    <item
+        android:id="@+id/credits_item"
+        android:orderInCategory="100"
+        android:title="credits"
+        app:showAsAction="never" />
+
+</menu>

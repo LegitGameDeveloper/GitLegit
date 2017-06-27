@@ -36,4 +36,127 @@
     <string name="fake_job_4_title">Mechanic wanted</string>
     <string name="fake_job_4_description">Vehicle customization garage: \'FauxOriginal\', searching for new mechanic \n Wage: 3200 monthly</string>
 
+    <string name="john_scenario2_1">Once upon a time John Doe noticed he is short on groceries for this week. Help John Doe to find a grocery and take advantage on the discount the supermarket is offering.
+</string>
+    <string name="john_scenario2_2">Good day Sir, welcome we have a great deal for today. All you need to do is to fill in this form and you will receive a card where you will get daily discount from our store. Great right?..
+</string>
+    <string name="john_scenario2_3">First you need to fill a form on our iPad and we will print the card for you. It will only take 2 minutes of your time.”</string>
+    <string name="john_scenario2_4">Thank you for filling in the form. You will receive the deal right away by showing your card to the cashier. She will scan your card and after that you will receive the discount. </string>
+    <string name="john_scenario2_4_no"> Thank you for your time sir. </string>
+
+
+    <!-- different scenario for aldi no that leads to fast food-->
+    <string name="john_scenario2_aldi_no_1">Good day sir, we give away coupons for a free meal in fast food restaurants.</string>
+    <string name="john_scenario2_aldi_no_2">Okay great, thank you.</string>
+    <string name="john_scenario2_aldi_no_question">Where would you like to use this coupon?</string>
+    <string name="john_scenario2_aldi_mac"> McDonald’s</string>
+    <string name="john_scenario2_aldi_burgerking"> Burger King</string>
+    <string name="john_scenario2_aldi_fastfood">Good day sir, I see you have a coupon. If you share a selfie with your meal your drink will be free aswell.</string>
+    <string name="john_scenario2_question"> Do you want to take this offer?</string>
+    <string name="john_scenario2_answer_1">Yes</string>
+    <string name="john_scenario2_answer_2">No</string>
+    <string name="john_scenario2_offer_yes"> You take a selfie, post it on social media, receive the discount and leave.</string>
+    <string name="john_scenario2_offer_yes_2"> Two weeks later . . .You find your picture on a billboard! Unlawfull use of your image,\n likely because you gave away personal information away, try to play again!</string>
+    <!-- end of scenario for aldi no choice-->
+
+    <string name="john_scenario2_5"> Well finally I got my groceries, but I’m quite hungry now and don’t want to cook something right away. Maybe some fast food will keep me up.. </string>
+
+    <string name="john_scenario3_2"> Too many choices, where should I go? I’m quite short on cash as well, lets take a look at places that give discounts for now </string>
+    <string name="john_scenario3_2_5"> </string>
+    <string name="john_scenario3_2_question"> Where would you like to eat?</string>
+    <string name="john_scenario3_2_answer_mac"> McDonald’s</string>
+    <string name="john_scenario3_2_answer_2"> Burger King</string>
+
+    <string name="john_scenario3_3"> Hmm looks good, I’m so hungry right now! </string>
+    <string name="john_scenario3_4"> Hi Sir! Did you take a look at our great deals for today? You can get 50% discount on anything you order by making a selfie with your order on social media. Do you want to take this deal?</string>
+    <string name="john_scenario3_4_5"> You made your decision..continue</string>
+    <string name="john_scenario3_4_question"> Do you want to take this offer?</string>
+    <string name="john_scenario3_4_answer_1"> Yes</string>
+    <string name="john_scenario3_4_answer_2"> No</string>
+
+    <string name="john_scenario3_5"> You take a selfie, post it on social media, receive the discount and leave.</string>
+    <string name="john_scenario3_6"> Two weeks later . . . selfie on billboard in random country..</string>
+    <string name="john_scenario3_7"> Lets head back home I have yet to prepare dinner.</string>
+    <string name="john_scenario3_8"> So lets see what do I have here, meat, rice, paprika. . . argh too many choices. Wait wait lets try this website I’ve recently heard about . . . Supercook.com yeah lets just add my groceries and see what I can cook with it.</string>
+    <string name="john_scenario3_9"> Lets add meat, rice and paprikas to the ingredients on the web and lets see what recipes supercook has in store for me.</string>
+    <string name="john_scenario3_10">Ah a pop-up from supercook.com</string>
+    <string name="john_scenario3_11"> [choice]</string>
+    <string name="john_scenario3_12">The next morning..</string>
+    <string name="john_scenario3_13"> WHAT!? Wow I got 12 new mails!?</string>
+    <string name="john_scenario3_14">But…how? How do they kn..wh..what was in that terms and condition from supercook?[picture terms and condition]</string>
+    <string name="john_scenario3_15">Busted!</string>
+    <string name="john_scenario3_skip_popup_1"> I don\’t trust these terms and conditions..</string>
+    <string name="john_scenario3_skip_popup_2"> I have some instant noodles somewhere anyway I\’ll eat that i guess.</string>
+    <string name="john_scenario3_skip_popup_3"> VICTORY! You have completed the game, your data is safe!</string>
+
+    <!--TERMS AND CONDITIONS SUPERCOOK-->
+    <string name="supercook_terms_conditions">SUPERCOOK kitchen machines are used to prepare various recipes. In order to provide even more options to use the SUPERCOOK kitchen machines, SUPERCOOK offers the SUPERCOOK Recipe App to registered users in connection with the SUPERCOOK kitchen machines. The SUPERCOOK Recipe App allows the users to share recipe ideas with and use recipes of third parties. The following General Terms and Conditions shall govern the legal relationship between Supercook Limited, Wilson House, 19-27 Wyndham Street, Central, Hong Kong represented by the Director Michael Roessler, – hereinafter referred to as: „SUPERCOOK“ – and the user, who uses the Recipe App or other online or IT instruments offered by SUPERCOOK (hereinaf-ter jointly referred to as “SUPERCOOK Online”) to present or to use the recipes or parts thereof via SUPERCOOK Online. These General Terms and Conditions can be downloaded or printed - before or after the conclusion of the contract – on www.supercook.me. Upon the user’s confirmation of these present General Terms and Conditions, a contract shall be concluded on the basis of the following conditions:
+
+1. Subject matter of contract
+1.1 Via SUPERCOOK Online, SUPERCOOK provides the user with an opportunity to enter recipe data, in particular ingredients and individual preparation steps. Such recipes entered by the user, related pictures and other data shall hereinafter be collectively referred to as “User\’s Recipes”. To the extent the User’s Recipes comply with SUPERCOOK’s requirements relating to the publication and further use, SUPERCOOK shall be entitled to convert such User’s Recipes into a form that is suitable for such further use. SUPERCOOK shall be in particular entitled to select a form of presentation that is suitable for uniform recipe collections and recipe databases, which can be used by third parties. In addition, SUPERCOOK shall be entitled to process such data in a data set that can be read by SUPERCOOK kitchen machines. With regard thereto, SUPERCOOK shall be entitled to adapt and change the User’s Recipe data. SUPERCOOK shall be in particular entitled to make amendments or deletions. The presentation of the recipes, texts, pictures, data and other forms of presentation prepared by SUPERCOOK on the basis of the User’s Recipes for further use thereof shall hereinafter collectively be referred to as “SUPERCOOK Recipe Data”. SUPERCOOK shall be entitled to make such SUPERCOOK Recipe Data available to third parties via SUPERCOOK Online. In addition, SUPERCOOK shall be entitled to make such SUPERCOOK Recipe Data available to third parties in connection with the SUPERCOOK kitchen machines. Furthermore, SUPERCOOK shall be entitled to use the SUPERCOOK Recipe Data in any other form. With this contract, the user grants to SUPERCOOK all rights to utilize the User’s Recipes in connection with the SUPERCOOK kitchen machines or in any other form. However, this contract and/or the entry of User’s Recipes shall not establish any obligation of SUPERCOOK to store, maintain, use in SUPERCOOK Recipe Data, make available for SUPERCOOK kitchen machines or use in any other form the User’s Recipes. SUPERCOOK reserves the right to select User’s Recipe Data and to decide if and if so, to what extent such data shall be made available and utilized
+1.2 In addition, this contract shall govern the use by registered users of the SUPERCOOK Recipe Data provided by SUPERCOOK, i.e. the terms and conditions subject to which users may use the SUPERCOOK Recipe Data.
+
+2. Registration
+2.1 The user has to register in order to be able to enter User’s Recipes via SUPERCOOK Online or in order to use SUPERCOOK Recipe Data. For such registration, the user has to enter the serial number of his/her SUPERCOOK kitchen machine and his/her access data. Upon registration, the user shall select a username and password. The user shall be obliged to protect his/her username and password from access by third parties
+2.2 The user confirms that he/she is of full age upon registration and that the user data are true and correct. If the user data change, the user shall be obliged to adjust his/her user data accordingly. This may be done on SUPERCOOK’s website.
+2.3 Upon registration and confirmation of these General Terms and Conditions, a contract shall be concluded between the user and SUPERCOOK.
+
+3. Entry of User’s Recipes
+3.1 Via SUPERCOOK Online, SUPERCOOK enables the user to enter User’s Recipes. When entering recipes, the user shall comply with the regulations stipulated for the entry of User\’s Recipes on SUPERCOOK Online.
+3.2 The user may only enter data that are cooking recipes for the preparation of food that is fit for human consumption. The user must not upload viruses or other files that are harmful to IT systems. The contents, data and/or other information provided must not violate statutory provisions, third party rights or these present General Terms and Conditions, must not be abusive or violate public morality or otherwise be unreasonable for SUPERCOOK. In particular with regard to pictures and text included in the User’s Recipes, the user shall be obliged to ensure that no copyrights, personal rights or any other rights of third parties are violated. SUPERCOOK shall be entitled to delete such contents, data or information without notice. There shall be no right to compensation.
+3.3 SUPERCOOK shall not be obliged to check the User’s Recipes before processing and utilization
+3.4 The entry of User’s Recipes shall not be for storing, collecting or sharing customer\’s recipes. Therefore, SUPERCOOK shall not be liable for the storage, maintenance and further processing of the User’s Recipes. SUPERCOOK shall at all times be entitled to delete entries.
+
+4. Processing and utilization of the User’s Recipes by SUPERCOOK
+4.1 If the User’s Recipes are suitable, SUPERCOOK shall be entitled to process them in SUPERCOOK Recipe Data. SUPERCOOK shall be entitled to decide whether recipes are converted or not in its sole discretion and the user shall not be entitled to demand that his/her recipes are so converted.
+4.2 SUPERCOOK shall be entitled to make the User’s Recipes available to other users as SUPERCOOK Recipe Data. In addition, SUPERCOOK shall be entitled to store and use such User\’s Recipes in SUPERCOOK kitchen machines and to grant the right to do so to third parties. Furthermore, SUPERCOOK shall be entitled without restrictions to use, publish and provide third parties with the User’s Recipes in any other form, including online distribution and distribution in printed materials (books, magazines, etc.). Such authorization shall relate to User’s Recipes that are processed in SUPERCOOK Recipe Data as well as to User’s Recipes that are not processed therein. To the extent User’s Recipes are subject to the user\'s copyrights or any other rights, the user shall hereby grant to SUPERCOOK the non-exclusive, irrevocable, free-of-charge, transferable right with regard to all subject matters and unlimited in terms of time and place, with the right to grant sublicenses to use such recipes. Such right of use shall include all known and yet unknown forms of utilization as well as the right to process and redesign such recipes. SUPERCOOK shall be entitled to provide the User’s Recipes and the SUPERCOOK Recipe Data generated on the basis thereof in whole and in part to third parties for use via SUPERCOOK Online as well as via SUPERCOOK kitchen machines. This shall also apply to the pictures and texts that are part of the User’s Recipes and it shall in particular apply to the right to include and distribute such recipes in recipe collections as well as to the commercial utilization of such collections or to the presentation of individual recipes (e.g. in online databases, magazines or books). To the extent the user is entitled to be named as the author of such recipe in accordance with the provisions of copyright law, the user shall be obliged to expressly state such right upon entry of the data or to waive such right with regard to any individual User’s Recipe.
+4.3 SUPERCOOK shall be entitled to include third parties in the utilization of the User\’s Recipes and to grant such third parties rights of use with regard thereto or to transfer such rights to these third parties.
+
+5. Use of the SUPERCOOK Recipe Data for SUPERCOOK kitchen machines
+5.1 Via SUPERCOOK Online, SUPERCOOK enables registered users to use SUPERCOOK Recipe Data. SUPERCOOK shall only provide technical applications which enable the user to use the SUPER-COOK Recipe Data on SUPERCOOK kitchen machines. SUPERCOOK shall not assume any liability for the applicability or realizability of the SUPERCOOK Recipe Data or the User’s Recipes provided.
+5.2 The right to use the SUPERCOOK Recipe Data shall be restricted to the use of such data in connection with the SUPERCOOK kitchen machines registered by the user.
+
+6. Restrictions of the use of SUPERCOOK Online
+6.1 When using SUPERCOOK Online, the user shall be obliged to comply with any and all applicable laws as well as with any and all third party rights. The user must not publish, disseminate or otherwise use illegal contents on SUPERCOOK Online. Above all, any act in violation of youth protection laws, criminal laws or of the Act against Unfair Competition shall be prohibited. In addition, the user shall be prohibited from violating third-party laws, in particular from violating copyrights, trade mark rights, patents, registered designs, utility models or personal rights.
+6.2 The user shall be prohibited from using SUPERCOOK Online in a way that facilitates the modification, copying, overwriting or blocking of data or that might otherwise endanger the functionality or the proper use of SUPERCOOK Online.
+6.3 SUPERCOOK shall be entitled to block a user\'s access in case such user violates the provisions of these present Terms and Conditions, including but not limited to the provisions contained in sections 6.1 or 6.2. SUPERCOOK shall be entitled to delete data and information without notice if such data are suspected to be illegal or might cause technical malfunctions. In addition, SUPERCOOK shall be entitled to delete any data or information unsuitable for further processing in SUPERCOOK Recipe Data or for any other utilization as described in section 4.
+
+7. Changes of performance by SUPERCOOK and technical specifications
+7.1 SUPERCOOK reserves the right to change or cease to provide the services described in these General Terms and Conditions.
+7.2 The user understands that the availability of the entry application as well as the volume of the entered data might be restricted by technical malfunctions or capacity limits. The entry applications and possible uses might be restricted by capacity limits, maintenance or security issues, malfunctions of communication or power networks or other malfunctions. SUPERCOOK shall not be liable for such technical malfunctions.
+7.3 SUPERCOOK shall neither be liable for the contents, data and information provided by users nor for the contents of linked third-party websites, if any.
+
+8.
+The user shall indemnify SUPERCOOK from any claims, including claims for damages, asserted by third parties based on a violation of such third-party rights by the data, contents and information provided by the user. The above indemnity obligation shall not apply to the extent such violation of third-party rights is not attributable to the user.
+
+9. Liability of SUPERCOOK
+9.1 SUPERCOOK’s liability for any damage the user suffers, irrespective of the underlying legal reason, shall be limited to willful intent and gross negligence of its legal representatives, officers and vicarious agents. Any claims for damages, irrespective of the underlying legal reason, based on slight negligence can only be asserted against SUPERCOOK if a material contractual obligation is violated. A material contractual obligation is an obligation the fulfillment of which the user may rely on and the fulfillment of which is the fundamental basis for the due execution of the contract. The amount of any claims for damages with regard thereto shall be limited to the typical foreseeable damage. Any claims based on bodily injury or property damage in accordance with the Product Liability Act shall remain unaffected thereby.
+9.2 SUPERCOOK will share user information with other companies under supervision of SUPERFOODS mother company. SUPERCOOK’s data protection provisions shall be a material part of these General Terms and Conditions in accordance with section 12.2.
+
+10. Technical requirements
+10.1 The user shall be obliged to comply with the technical requirements defined in "Technical Requirements" and shall be responsible for the required hardware and communication networks. SUPERCOOK shall neither be liable for the security nor for the functionality of the hardware and communication networks used by the user. Any costs incurring in relation thereto shall be borne by the user.
+10.2 The guarantee for SUPERCOOK kitchen machines shall be exclusively subject to the guarantee provisions agreed upon the purchase of the SUPERCOOK kitchen machine. Such provisions shall neither be amended nor modified by these present General Terms and Conditions.
+10.3 SUPERCOOK shall not be liable for any technical malfunctions or configuration issues at the user\'s location.
+
+11. Information on the right to withdraw from the contract for consumers
+If the purpose of the user’s registration with SUPERCOOK is neither attributable to a commercial business activity nor to a self-employed occupation, the following provisions shall apply to the user as a consumer for the purposes of the relevant applicable law (section 13 of the German Civil Code):
+11.1 The user shall be entitled to revoke any contractual declarations within 14 days in writing (e.g. letter, fax, e-mail) without stating any reasons. Such period of time shall commence upon re-ceipt of this information in text form, however, not before conclusion of contract and not before SUPERCOOK fulfilled its information obligations stipulated in article 246, section 2 in conjunction with section 1, paragraph 1 and paragraph 2 of the Introductory Act to the German Civil Code (EGBGB) as well as its obligations in accordance with section 312g, paragraph 1, clause 1 of the German Civil Code in conjunction with article 246, section 3 of the Introductory Act to the German Civil Code (EGBGB). If the written revocation is dispatched in good time, the time limit for the revocation shall be deemed observed. Such notice of revocation should be addressed to: Supercook Limited, Wilson House, 19-27 Wyndham Street, Central, Hong Kong. Such revocation may also be transmitted to SUPERCOOK via the contact form available on the SUPERCOOK website (www.supercook.me).
+11.2 In case of an effective revocation, the parties shall be obliged to restore what has been received in performance of the contract and any benefits derived therefrom.
+11.3 The user‘s right of revocation shall lapse early if the user expressly declares that both parties completely fulfilled the contract before the user exercised his/her right of revocation.
+
+12. General provisions
+12.1 SUPERCOOK reserves the right to change these present General Terms and Conditions at any time without stating any reasons, provided such change is not unreasonable for the user. SUPERCOOK shall inform the user in due time before making any changes to these present General Terms and Conditions. To the extent the user fails to object in writing to such changes of these present General Terms and Conditions within 8 weeks after receipt of such notice, such changed General Terms and Conditions shall be deemed accepted by the user. To the extent necessary, SUPERCOOK shall inform the user of his/her right to object to such changes and of the meaning of the period of time for objections, together with the information on the changes to these present General Terms and Conditions.
+12.2 These present General Terms and Conditions shall be amended by SUPERCOOK\'s data protection regulations http://www.supercook.me/de/supercook/content/privacy/.
+12.3 Should individual provisions of these present General Terms and Conditions be or become ineffective, this shall not affect the effectiveness of the remaining provisions hereof.
+12.4 Place of performance shall be the seat of SUPERCOOK.
+12.5 The place of jurisdiction for merchants for the purposes of the German Commercial Code shall be the seat of SUPERCOOK.
+12.6 The contract concluded with the user shall be exclusively subject to German Law, the UN Sales Convention shall be excluded.\n\n DENY TERMS</string>
+
+
+    <string name="tips_tricks1">Think before you act: Be wary of communications that implore you to act immediately, offer something that sounds too good to be true or ask for personal information.</string>
+    <string name="tips_tricks2">Be aware of what’s being shared: Be aware that when you share a post, picture or video online, you may also be revealing information about others. Be thoughtful when and how you share information about others.</string>
+    <string name="tips_tricks3">Be aware of what’s being shared: Be aware that when you share a post, Information, picture or video online, you may also be revealing information about others. Be thoughtful when and how you share information about others.</string>
+    <string name="tips_tricks4">Website security! The “s” in “https” stands for secure, meaning that the website is employing SSL encryption. Check for an “https:” or a padlock icon in your browser’s URL bar to verify that a site is secure before entering any personal information.</string>
+    <string name="tips_tricks5">Read privacy policies: Websites’ privacy policies and user agreements should provide details as to how your information is being collected and protected as well as how that site tracks your online activity. Websites that don’t provide this information in their policies should generally be avoided.</string>
+
 </resources>

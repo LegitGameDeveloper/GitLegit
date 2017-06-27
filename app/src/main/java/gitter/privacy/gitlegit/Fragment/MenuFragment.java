@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 import gitter.privacy.gitlegit.MainActivity;
 import gitter.privacy.gitlegit.R;
@@ -20,6 +21,7 @@ public class MenuFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         parentView = bindXMLToFragment(R.layout.menu_background, inflater,container);
+        ButterKnife.bind(this, parentView);
         ((MainActivity)getActivity()).setMainBackgroundImage(0);
         ((MainActivity)getActivity()).setStoryContainerVisible(false);
 
@@ -28,11 +30,15 @@ public class MenuFragment extends BaseFragment {
 
     @OnClick(R.id.jobHuntStory)
     public void doJobHunt(){
+        ((MainActivity)getActivity()).setMainBackgroundImage(R.drawable.homesweethome);
+        ((MainActivity)getActivity()).setStoryContainerVisible(true);
         ((MainActivity)getActivity()).switchToDifferentScreen(new JobIntroFragment(), "JobIntroFragment", false);
     }
 
     @OnClick(R.id.foodHuntStory)
     public void doFoodHunt(){
-
+        ((MainActivity)getActivity()).setMainBackgroundImage(R.drawable.homesweethome);
+        ((MainActivity)getActivity()).setStoryContainerVisible(true);
+        ((MainActivity)getActivity()).switchToDifferentScreen(new FoodIntroFragment(), "FoodIntroFragment", false);
     }
 }

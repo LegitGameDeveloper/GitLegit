@@ -24,7 +24,7 @@ public class JobIntroFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         setTextContainerListener();
-        return bindXMLToFragment(R.layout.john_intro_view, inflater, container);
+        return bindXMLToFragment(R.layout.job_intro_view, inflater, container);
     }
 
     public void setTextContainerListener(){
