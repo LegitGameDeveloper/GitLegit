@@ -129,6 +129,7 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
 
             switch (textCounter){
                 case 0:
+                    //((MainActivity)getActivity()).setMainBackgroundImage(R.drawable.);
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_introduction_info_1),"");
                     break;
                 case 1:
@@ -142,8 +143,6 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     break;
                 case 4:
  //                   ((MainActivity)getActivity()).switchToDifferentScreen(new SearchingForJobFragment(),SearchingForJobFragment.TAG, false);
-
-
                 case 5:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_1),"");
                     break;
@@ -153,6 +152,7 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     myButton2.setVisibility(View.VISIBLE);
                     textview1.setVisibility(View.VISIBLE);
                     ((MainActivity)getActivity()).setStoryContainerVisible(false);
+                    ((MainActivity)getActivity()).setMainBackgroundImage(0);
 
                 case 7:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_2),"Supermarket seller Patrick");
@@ -171,6 +171,7 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     myButton2.setVisibility(View.VISIBLE);
                     textview1.setVisibility(View.VISIBLE);
                     ((MainActivity)getActivity()).setStoryContainerVisible(false);
+                    ((MainActivity)getActivity()).setMainBackgroundImage(0);
                     break;
                 case 10:
                     mSuperMarktName_et.setVisibility(View.VISIBLE);
@@ -179,10 +180,16 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     mSuperMarktCellPhone_et.setVisibility(View.VISIBLE);
                     mSuperMarktEmail.setVisibility(View.VISIBLE);
                     myRegisterButton.setVisibility(View.VISIBLE);
+                    mSuperMarktName_et.setEnabled(false);
+                    mSuperMarktBirthday_et.setEnabled(false);
+                    mSuperMarktResident_et.setEnabled(false);
+                    mSuperMarktCellPhone_et.setEnabled(false);
+                    mSuperMarktEmail.setEnabled(false);
                     ((MainActivity)getActivity()).setStoryContainerVisible(false);
                     break;
                 case 11:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_4), "Supermarket seller Patrick");
+                    ((MainActivity)getActivity()).setMainBackgroundImage(R.drawable.casier);
                     break;
                 case 12:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_5), "John");
@@ -193,6 +200,7 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     break;
 
                 case 14:
+                    ((MainActivity)getActivity()).setMainBackgroundImage(0);
                     stap = 3;
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_2_5), "John");
                     textview1.setText(R.string.john_scenario3_2_question);
@@ -225,9 +233,11 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     System.out.println(sharedPrefChoices.getString("stap2", null));
                     System.out.println(sharedPrefChoices.getString("stap3", null));
                     System.out.println(sharedPrefChoices.getString("stap4", null));
+                    ((MainActivity)getActivity()).setMainBackgroundImage(0);
                     break;
                 case 18:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_5), "John");
+                    ((MainActivity)getActivity()).setMainBackgroundImage(R.drawable.selfieburgerking);
                     break;
                 case 19:
                     // here moet de selfie komen
@@ -235,9 +245,11 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                 case 20:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_6), "");
                     textCounter = 29;
+                    ((MainActivity)getActivity()).setMainBackgroundImage(R.drawable.selfiebillboard);
                     break;
                 case 21:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_7), "");
+                    ((MainActivity)getActivity()).setMainBackgroundImage(R.drawable.homesweethome);
                     break;
                 case 22:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_8), "");
@@ -248,18 +260,22 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     break;
                 case 25:
                     // hier moet nog de popup komen
+                    ((MainActivity)getActivity()).setMainBackgroundImage(0);
                     regularView.setVisibility(View.GONE);
                     websitePopup.setVisibility(View.VISIBLE);
                     ((MainActivity)getActivity()).setStoryContainerVisible(false);
                     break;
                 case 27:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_12), "");
+                    ((MainActivity)getActivity()).setMainBackgroundImage(R.drawable.homesweethome);
                     break;
                 case 28:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_13), "John Doe");
+                    ((MainActivity)getActivity()).setMainBackgroundImage(R.drawable.spam);
                     break;
                 case 29:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_14), "John Doe");
+                    ((MainActivity)getActivity()).setMainBackgroundImage(R.drawable.terms);
                     break;
                 case 30:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_15), "");
@@ -299,15 +315,23 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     break;
                 case 36:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_offer_yes), " ");
+                    ((MainActivity)getActivity()).setMainBackgroundImage(R.drawable.selfieburgerking);
                     break;
                 case 37:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario2_offer_yes_2), " ");
+                    textCounter=29;
+                    ((MainActivity)getActivity()).setMainBackgroundImage(R.drawable.selfiebillboard);
                     break;
                 case 38:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_skip_popup_1), "John Doe");
                     break;
                 case 39:
                     ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_skip_popup_2), "John Doe");
+                    break;
+                case 40:
+                    //victory
+                    ((MainActivity)getActivity()).setStoryText(getString(R.string.john_scenario3_skip_popup_3), " ");
+                    ((MainActivity)getActivity()).setMainBackgroundImage(R.drawable.winning);
                     break;
                 default:
                     Log.e(TAG, "playStory: unknown story counter for introduction given, why u do dis");
@@ -366,10 +390,12 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                 if (stap == 1) {
                     edit.putString("stap1", "aldi");
                     choice = sharedPrefChoices.getString("stap1", null);
+                    ((MainActivity)getActivity()).setMainBackgroundImage(R.drawable.aldiview);
                 } else if (stap == 2) {
                     edit.putString("stap2", "yes");
                 } else if (stap == 3) {
                     edit.putString("stap3", "McDonalds");
+                    ((MainActivity)getActivity()).setMainBackgroundImage(R.drawable.mcdonalds);
                 } else if (stap == 4) {
                     edit.putString("stap4", "yes");
                 } else if (stap == 5) {
@@ -388,6 +414,7 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                 if (stap == 1) {
                     edit.putString("stap1", "badsupermarket");
                     choice = sharedPrefChoices.getString("stap1", null);
+                    ((MainActivity)getActivity()).setMainBackgroundImage(R.drawable.sketchystoreview);
                 } else if (stap == 2) {
                     edit.putString("stap2", "no");
                     ((MainActivity)getActivity()).setStoryContainerVisible(true);
@@ -398,6 +425,7 @@ public class JohnIntroFragment extends BaseFragment implements View.OnClickListe
                     }
                 } else if (stap == 3) {
                     edit.putString("stap3", "BurgerKing");
+                    ((MainActivity)getActivity()).setMainBackgroundImage(R.drawable.burgerking);
                 } else if (stap == 4) {
                     edit.putString("stap4", "no");
                     textCounter = 21;

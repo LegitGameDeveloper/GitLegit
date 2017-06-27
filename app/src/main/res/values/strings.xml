@@ -56,18 +56,19 @@
     <string name="john_scenario3_4_answer_2"> No</string>
 
     <string name="john_scenario3_5"> You take a selfie, post it on social media, receive the discount and leave.</string>
-    <string name="john_scenario3_6"> Two weeks later . . .[TODO picture selfie on billboard in random country]</string>
+    <string name="john_scenario3_6"> Two weeks later . . . selfie on billboard in random country..</string>
     <string name="john_scenario3_7"> Lets head back home I have yet to prepare dinner.</string>
     <string name="john_scenario3_8"> So lets see what do I have here, meat, rice, paprika. . . argh too many choices. Wait wait lets try this website I’ve recently heard about . . . Supercook.com yeah lets just add my groceries and see what I can cook with it.</string>
     <string name="john_scenario3_9"> Lets add meat, rice and paprikas to the ingredients on the web and lets see what recipes supercook has in store for me.</string>
     <string name="john_scenario3_10">Ah a pop-up from supercook.com</string>
     <string name="john_scenario3_11"> [choice]</string>
     <string name="john_scenario3_12">The next morning..</string>
-    <string name="john_scenario3_13"> WHAT!? Wow I got 12 new mails!?[picture screen with spam mails]</string>
+    <string name="john_scenario3_13"> WHAT!? Wow I got 12 new mails!?</string>
     <string name="john_scenario3_14">But…how? How do they kn..wh..what was in that terms and condition from supercook?[picture terms and condition]</string>
     <string name="john_scenario3_15">Busted!</string>
     <string name="john_scenario3_skip_popup_1"> I don\’t trust these terms and conditions..</string>
     <string name="john_scenario3_skip_popup_2"> I have some instant noodles somewhere anyway I\’ll eat that i guess.</string>
+    <string name="john_scenario3_skip_popup_3"> VICTORY! You have completed the game, your data is safe!</string>
 
     <!--TERMS AND CONDITIONS SUPERCOOK-->
     <string name="supercook_terms_conditions">SUPERCOOK kitchen machines are used to prepare various recipes. In order to provide even more options to use the SUPERCOOK kitchen machines, SUPERCOOK offers the SUPERCOOK Recipe App to registered users in connection with the SUPERCOOK kitchen machines. The SUPERCOOK Recipe App allows the users to share recipe ideas with and use recipes of third parties. The following General Terms and Conditions shall govern the legal relationship between Supercook Limited, Wilson House, 19-27 Wyndham Street, Central, Hong Kong represented by the Director Michael Roessler, – hereinafter referred to as: „SUPERCOOK“ – and the user, who uses the Recipe App or other online or IT instruments offered by SUPERCOOK (hereinaf-ter jointly referred to as “SUPERCOOK Online”) to present or to use the recipes or parts thereof via SUPERCOOK Online. These General Terms and Conditions can be downloaded or printed - before or after the conclusion of the contract – on www.supercook.me. Upon the user’s confirmation of these present General Terms and Conditions, a contract shall be concluded on the basis of the following conditions:

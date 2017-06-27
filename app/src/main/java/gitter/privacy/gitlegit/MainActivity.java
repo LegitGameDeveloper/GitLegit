@@ -2,12 +2,15 @@ package gitter.privacy.gitlegit;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.DrawableRes;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -24,8 +27,13 @@ public class MainActivity extends AppCompatActivity {
     TextView mStoryText;
     @BindView(R.id.storyTeller)
     TextView mStoryTeller;
+    @BindView(R.id.imageViewMainPort)
+    ImageView importantImageView;
+    @BindView(R.id.imageJohnDoeMainPort)
+    ImageView johnDoeImage;
 
-    public static final String shopping_name = "shopping_name";
+    private boolean wrongWebsiteChosen = false;
+    private boolean wrongApplicationSent = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +43,43 @@ public class MainActivity extends AppCompatActivity {
 
         Log.d(TAG, "onCreate: going to do some preparing");
         switchToDifferentScreen(new JohnIntroFragment(), JohnIntroFragment.TAG, false);
+    }
+
+    public void hideMainBackgroundImage(boolean hide){
+        if(hide){
+            importantImageView.setVisibility(View.GONE);
+        }else{
+            importantImageView.setVisibility(View.VISIBLE);
+        }
+    }
+
+    public void setMainBackgroundImage(@DrawableRes int image){
+        if(image == 0){
+            importantImageView.setVisibility(View.GONE);
+            return;
+        }
+        importantImageView.setVisibility(View.VISIBLE);
+        importantImageView.setImageDrawable(ContextCompat.getDrawable(this,image));
+    }
+
+    public boolean isWrongWebsiteChosen(){
+        return wrongWebsiteChosen;
+    }
+
+    public boolean isWrongApplicationSent(){
+        return wrongApplicationSent;
+    }
+
+    public void setWrongWebsiteChosen(boolean wrongWebsiteChosen){
+        this.wrongWebsiteChosen = wrongWebsiteChosen;
+    }
+
+    public void setWrongApplicationSent(boolean wrongApplicationSent){
+        this.wrongApplicationSent = wrongApplicationSent;
+    }
+
+    public void bringStoryToFront(){
+        mStoryContainer.bringToFront();
     }
 
     public void setStoryText(String textToDisplayInBubble, String personTalking){
@@ -59,6 +104,14 @@ public class MainActivity extends AppCompatActivity {
      * @param listener
      */
     public void setmStoryContainerListener(View.OnClickListener listener){
+        if(listener == null){
+            listener = new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //don't do anything
+                }
+            };
+        }
         mStoryContainer.setOnClickListener(listener);
     }
 
