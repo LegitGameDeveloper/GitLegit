@@ -16,7 +16,6 @@ import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import gitter.privacy.gitlegit.Fragment.JobHuntIntroFragment;
 import gitter.privacy.gitlegit.Fragment.MenuFragment;
 
 public class MainActivity extends AppCompatActivity {

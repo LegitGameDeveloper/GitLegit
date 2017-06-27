@@ -28,7 +28,7 @@ public class MenuFragment extends BaseFragment {
 
     @OnClick(R.id.jobHuntStory)
     public void doJobHunt(){
-        ((MainActivity)getActivity()).switchToDifferentScreen(new JobHuntIntroFragment(), JobHuntIntroFragment.TAG, false);
+        ((MainActivity)getActivity()).switchToDifferentScreen(new JobIntroFragment(), "JobIntroFragment", false);
     }
 
     @OnClick(R.id.foodHuntStory)
